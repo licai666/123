@@ -12302,5 +12302,264 @@
   "project_keys": [
    "nightwatch"
   ]
+ },
+ {
+  "id": 534,
+  "title": "Dynamic Iron Butterflies Part 5 — 铁蝶 MAE 分布（3,968 笔）",
+  "title_zh": "铁蝶亏多少就该跑？近四千笔有答案",
+  "source_url": "http://www.optionfanatic.com/2017/02/16/dynamic-iron-butterflies-part-5/",
+  "source_name": "Option Fanatic",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 58,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "近四千笔铁蝶说清亏多少该跑，帮你定止损少误杀赢家",
+  "summary_zh": "这是一份铁蝶最大浮亏清单。最大浮亏就是开仓后最难熬时，账上最多亏了多少。3968笔里，赢家平均只亏到保证金的12.9%，输家亏到57.9%。止损设在50%，只会错杀约2%赢家。夜航社定止损，可以先拿它当尺子。",
+  "use_zh": "夜航社SPX 0DTE铁鹰和蝴蝶正缺止损准数，这条的50%线只错杀约2%赢家，能先当参考。但它是日终数据，盘中浮亏会更大，不能照搬。先在Paper模拟盘按分钟重算自家单子，再定止损。",
+  "action_step_zh": "拿Paper历史铁蝶单按分钟算最大浮亏，试50%止损会错杀几笔赢家",
+  "keywords": [
+   "铁蝶止损",
+   "最大浮亏",
+   "50%止损",
+   "RUT回测",
+   "赢家输家"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 535,
+  "title": "NIFTY 铁鹰移动止盈增补实验（同仓库新小节：移动止盈同场对照全灭）",
+  "title_zh": "铁鹰一用移动止盈，72轮全亏了",
+  "source_url": "https://github.com/tanishpd/indian-options-trading-algorithm/blob/HEAD/docs/11-intraday-backtest-findings.md",
+  "source_name": "GitHub",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 55,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "铁鹰移动止盈72轮全输，夜航社退出别用它",
+  "summary_zh": "这是一份铁鹰补测，回测就是拿旧行情模拟考一遍，铁鹰就是赌价格别跑太远。它同场比两种止盈：固定赚50%就走亏1.27万卢比，等回头才走亏2.12万卢比，72轮胜率0。说白了，四腿就是四张单，出场都要付费，小赚根本不够付，夜航社先别用它。",
+  "use_zh": "它细到回吐50%这一档，还有三档纯移动，胜率全是0，不是手气差一两回。夜航社的SPX 0DTE铁鹰也是四张单，出场费的坑一模一样。Paper退出先守住固定50%这一档，别写移动止盈，等自家测赢了再加。",
+  "action_step_zh": "看完记住小赚会被出场费吃掉就行，夜航社退出不用改，也不用试。",
+  "keywords": [
+   "铁鹰",
+   "移动止盈",
+   "固定止盈",
+   "四腿成本",
+   "胜率归零"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 536,
+  "title": "Put Credit Spread Study — 用 MAE 阈值实现止损的对照设计（RUT，4,136 笔）",
+  "title_zh": "罗素指数卖价差：拿到期比提前走更好",
+  "source_url": "http://www.optionfanatic.com/2017/09/",
+  "source_name": "Option Fanatic",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 58,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "卖价差拿到期更划算，止损定50%可先拿去回测",
+  "summary_zh": "这是一次卖价差回测，卖价差就是收钱卖保险、再买便宜保险挡大亏，回测就是拿旧单子模拟考一遍。他们查了2001到2017年罗素指数4136笔单，拿到期赢过剩7天就走。亏到保证金50%再走，跟拿到期差不多，亏到25%再走太紧。夜航社能借这套测法定止损，但准数表没拿到，得自己复测。",
+  "use_zh": "最能搬的是MAE止损法，MAE就是一笔单最惨时亏了多少，第一次越过净保证金的25%或50%就走。再配上剩7天走和拿到期比一比，费用按每张0.26、0.16、0.06美元分三档，正好补夜航社缺的离场回测。但它测的是罗素多日单，不是标普500当天单，先自家回测、再进Paper模拟盘验，验够再谈实盘。",
+  "action_step_zh": "给夜航社回测加两组：MAE止损50%对拿到期，先跑一轮看排序",
+  "keywords": [
+   "卖价差",
+   "止损线",
+   "拿到期",
+   "提前离场",
+   "回测"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 537,
+  "title": "The Timing of Variance Risk Premia Around Macroeconomic News Events（事件类型符号相反）",
+  "title_zh": "非农能卖期权，美联储开会那天要小心",
+  "source_url": "https://udspace.udel.edu/items/a7715f6b-fc64-49e8-90b3-db9e4975df84",
+  "source_name": "University of Delaware",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "非农和物价日卖方占便宜，美联储日卖方吃亏，别一刀切停做。",
+  "summary_zh": "这篇论文查美国大事公布日，期权谁赚钱。跨式就是同时买涨买跌，打个比方是两头押注。就业和物价数据日，买跨式亏钱，卖方占便宜。美联储公布日正好反过来，买方赚钱，卖方吃亏。你在Paper盘卖铁鹰收钱，像收保险费，美联储日最要小心。",
+  "use_zh": "夜航社记事件日时，可先按这组数分开看：非农买跨式亏2.4%、物价亏1.6%，偏卖方日；美联储赚1.7%，要单独警惕。但这组数是2004到2014年的月度跨式，还没扣买卖差价和佣金。别拿它套0DTE铁鹰算赚亏，只借这个方向在Paper盘分开记账。",
+  "action_step_zh": "看完记住三类日子要分开看就够，暂不用动手，别拿老数字套0DTE铁鹰。",
+  "keywords": [
+   "FOMC日",
+   "非农日",
+   "CPI日",
+   "卖方风险",
+   "跨式期权"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 538,
+  "title": "The 0DTE Iron Condor: A 75% Win Rate That Still Loses Money（事件日分组、扣点差实测）",
+  "title_zh": "当天铁鹰赢得多却还是亏钱",
+  "source_url": "https://mcp.optionkrafter.com/blog/0dte-iron-condor",
+  "source_name": "OptionKrafter",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 58,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "铁鹰胜率75%还亏钱，夜航社回测先扣真实点差",
+  "summary_zh": "这测的是当天到期的铁鹰。说白了，就是赌价格别跑太远。558笔赢了75.6%，每笔却平均亏1.16美元。亏钱主因是点差，就是买卖中间被吃掉的钱。美联储开会、物价数据那几天更亏。但你跳过那几天，也翻不了正。",
+  "use_zh": "它测的是SPY，你做的是SPX，亏多少不能直接搬。但16Δ、5美元翼宽、美东10点进场这套，能在夜航社照着复跑。复跑记得扣真实点差，每笔差1.48美元，事件日单独分组看。",
+  "action_step_zh": "把夜航社回测改成扣真实点差，加事件日减仓，用同款参数先跑一遍",
+  "keywords": [
+   "0DTE铁鹰",
+   "真实点差",
+   "事件日",
+   "高胜率亏钱"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 539,
+  "title": "Bullish Iron Butterflies Part 7 — 看涨铁蝶 MAE 分布（4,092 笔，含作者自我纠错）",
+  "title_zh": "四千多笔铁蝶回测：浮亏很浅，但止损算错了",
+  "source_url": "http://www.optionfanatic.com/2017/09/13/bullish-iron-butterflies-part-7/",
+  "source_name": "Option Fanatic",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 58,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "四千笔铁蝶浮亏大多很浅，但止损算法有坑别照搬。",
+  "summary_zh": "这是4092笔看涨铁蝶的回测成绩单。回测就是拿过去的考卷模拟考一遍。铁蝶就是赌价格小涨又别跑太远。作者看每笔单子中途最惨亏多少。这就叫最大浮亏，像潜水最深那一下。近九成单子浮亏不到翼宽一成。翼宽就是两边翅膀有多宽。但作者后来自己认错了。窄翼单子的浮亏被算小了。最该止损的单子反而难触发。还有单子价格突然跳空亏光。跳空就是价格一下跳过去。止损对这种单子也救不了。",
+  "use_zh": "最有用的就是作者认的这个错。止损不能拿调过的翼宽来算浮亏。窄翼会被算得假安全。夜航社现在只在Paper验铁蝶。正好先改自家回测的算法。重算完再定止损线，别照抄这组数。",
+  "action_step_zh": "把夜航社铁蝶回测改成没调过的翼宽，重算浮亏再定止损线。",
+  "keywords": [
+   "铁蝶回测",
+   "最大浮亏",
+   "窄翼风险",
+   "止损算法"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 540,
+  "title": "What We Learned About Option Position Swings — 2 万笔真实成交 MFE/MAE 研究（幅度数字在图里）",
+  "title_zh": "2万笔真单复盘：铁鹰最稳，铁蝶晃得最凶",
+  "source_url": "https://OptionAlpha.com/blog/what-we-learned-about-option-position-swings",
+  "source_name": "Option Alpha",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 51,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "看2万笔真单分清铁鹰铁蝶脾气，退出别太心急",
+  "summary_zh": "这是拿2万多笔真单做的复盘，专看拿着时赚亏晃多大。最高赚过叫最大浮盈，最惨亏过叫最大浮亏，像过山车的高点和低点。结果铁蝶晃得最凶，铁鹰晃得最小、最稳。铁鹰平均拿9.1天，赚最多和亏最多平均隔5.4天。可这批单没遇上大跌，跟你的当天单也不能直接套。",
+  "use_zh": "夜航社的铁鹰、铁蝶当天就到期，跟它9.1天的多日铁鹰对不上。能借的是分寸：铁蝶脾气最大，下单别下太满。幅度数只在图里拿不到，想定退出只能靠模拟盘逐笔记浮盈浮亏。",
+  "action_step_zh": "不用动手：记住铁鹰最稳、铁蝶最晃，这批单没遇过大跌就够了。",
+  "keywords": [
+   "最大浮盈",
+   "最大浮亏",
+   "铁鹰最稳",
+   "铁蝶最晃",
+   "持仓9.1天"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 541,
+  "title": "Kinfo Verified Trades — 券商直连、不可篡改的公开交易档案机制",
+  "title_zh": "交易记录改不了的平台，却没好期权策略可跟",
+  "source_url": "https://kinfo.com/verified-trades",
+  "source_name": "Kinfo",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "改不了的交易账能防造假，可惜没期权高手可跟",
+  "summary_zh": "Kinfo像个只认券商盖章的记账本，成绩只能券商填、自己写的不算。它连着IBKR等22家券商，成交改不了、删不了，模拟盘还不给认证。可上面没找到能跟的长期期权高手，佣金怎么扣也没写清。对读者就是看清：账能做真，但没策略可抄。",
+  "use_zh": "Kinfo最值得记的是三个口子：只连一个好账户、付费藏成交、随时转私密，它都不拦。你在Paper验夜航社时它也帮不上，模拟盘会被取消认证。以后查IBKR对账或看别人成绩，拿这三点先筛一遍就行。",
+  "action_step_zh": "看完知道它能防改账、防不住挑好账户，模拟盘也不认，不用动手",
+  "keywords": [
+   "券商直连",
+   "改不了的账",
+   "Kinfo",
+   "模拟盘不认",
+   "没高手可跟"
+  ],
+  "project_keys": [
+   "nightwatch",
+   "ibkr"
+  ]
+ },
+ {
+  "id": 542,
+  "title": "Digging Into 1-Day SPX At-The-Money Straddles（1 天期跨式定价 vs 实际波动）",
+  "title_zh": "一天期跨式买卖都亏，钱被成本吃光",
+  "source_url": "https://russellrhoads.substack.com/p/digging-into-1-day-spx-at-the-money",
+  "source_name": "Russell Rhoads (Substack)",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 58,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "一天期跨式赚头被成本吃光，夜航社回测别少算滑点",
+  "summary_zh": "有人翻了259天老账，查标普一天期跨式贵不贵，跨式就是同时押涨押跌、只赌动得大不大。跨式平均卖1.13%，指数实际平均动了1.22%，卖家先小亏；再扣每笔1点滑点，就是成交价总比想的差一点，买卖两边全期都亏。这提醒夜航社，回测就是拿过去考卷先模拟考一遍，成本算少了，就会自己骗自己。",
+  "use_zh": "夜航社做铁鹰和蝴蝶时，先把每笔1点滑点当成本三档里最松的一档，放进回测、再进Paper模拟盘对一对。CPI就是美国物价数据，它公布的12次里跨式10次卖贵、卖家赢，另2次卖便宜却亏得大，事件日不能只看赢几次。这笔滑点定得粗，没随买卖差价变，只能当下限，验够了谈实盘前还要拿自家成交价再校一遍。",
+  "action_step_zh": "夜航社回测加最松一档：每笔扣1点滑点，重跑铁鹰和蝴蝶看还剩多少赚头",
+  "keywords": [
+   "一天期跨式",
+   "滑点成本",
+   "CPI大波动",
+   "卖方小亏",
+   "回测成本"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 543,
+  "title": "Collective2 TOS 认证到底验什么（官方说明字段级核实）",
+  "title_zh": "C2真钱徽章，不代表业绩就是真的",
+  "source_url": "https://support.collective2.com/hc/en-us/articles/203041924-Trades-Own-Strategy-TOS-Program",
+  "source_name": "Collective2 Support",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "C2徽章只证明领队花真钱下单，帮你别把模拟业绩当真账。",
+  "summary_zh": "C2像个卖打法的集市，有人晒策略等人跟。TOS徽章只证明领队本人花真钱下过单。页面业绩还是模拟算的，手续费只是估的，胜率还没扣这笔钱。公开表缺进出价没法复算，你只能初筛，不能照着跟。",
+  "use_zh": "以后你在C2挑期权打法，就按这三条筛：带TOS、满三年、没删号重开。徽章平仓约十笔就能拿到，门槛其实不高，晒的盈亏又没法逐笔复算。夜航社还在Paper模拟盘验打法，拿C2找思路可以，别照晒的盈亏定仓位。",
+  "action_step_zh": "看完知道TOS不保业绩就够，不用动手；以后真上C2挑策略再按三年加徽章筛。",
+  "keywords": [
+   "TOS认证",
+   "真钱下单",
+   "模拟业绩",
+   "手续费估算",
+   "三年筛选"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
  }
 ]

@@ -1,6 +1,6 @@
 # 破茧情报站 · 其余条目名单（reference / low）
 
-共 292 条，一行一条。这些是备查与低优先条目；另有少数最早入库的低分条目与已划掉条目未收进本目录，站内总数以情报站为准。
+共 297 条，一行一条。这些是备查与低优先条目；另有少数最早入库的低分条目与已划掉条目未收进本目录，站内总数以情报站为准。
 
 - [4] AI帮手背后的地基，正在成形 — https://blog.mpdev.dev/en/artigo/github-trending-open-source-agents-infrastructure-nov2026（reference，55 分）
 - [11] 做市商被迫买卖会把价格推哪去 — https://www.moomoo.com/my/learn/gamma-exposure-gex-understanding-dealer-hedging-flows-and-key-levels?chain_id=2SIO64edkJGdFq.1ld6775&global_content=%7B%22promote_id%22%3A14079%2C%22sub_promote_id%22%3A30%2C%22f%22%3A%22mm%2Fmy%2Flearn%2Fcalculate-stock-price-option-strategies%22%7D（reference，49 分）
@@ -294,3 +294,8 @@
 - [527] 连上券商后，每笔期权交易自动晒出来 — https://thetagang.com/major（reference，47 分）
 - [528] 卖期权策略的成绩单，亏单也删不掉 — https://collective2.com/my/2ZWOP3PGS（reference，47 分）
 - [529] 晒出铁鹰逐笔账，亏钱那年也没藏 — http://www.the-lazy-trader.com/p/options-trading-results.html（reference，47 分）
+- [535] 铁鹰一用移动止盈，72轮全亏了 — https://github.com/tanishpd/indian-options-trading-algorithm/blob/HEAD/docs/11-intraday-backtest-findings.md（reference，55 分）
+- [537] 非农能卖期权，美联储开会那天要小心 — https://udspace.udel.edu/items/a7715f6b-fc64-49e8-90b3-db9e4975df84（reference，47 分）
+- [540] 2万笔真单复盘：铁鹰最稳，铁蝶晃得最凶 — https://OptionAlpha.com/blog/what-we-learned-about-option-position-swings（reference，51 分）
+- [541] 交易记录改不了的平台，却没好期权策略可跟 — https://kinfo.com/verified-trades（reference，47 分）
+- [543] C2真钱徽章，不代表业绩就是真的 — https://support.collective2.com/hc/en-us/articles/203041924-Trades-Own-Strategy-TOS-Program（reference，47 分）
