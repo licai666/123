@@ -1,294 +1,296 @@
-# 破茧情报站 · 其余条目名单（去重 / 避坑用）
+# 破茧情报站 · 其余条目名单（reference / low）
 
-下面是已判为「只是看看 / 用处不大」的条目。**这些条目 leex 已经判过，不要再当新发现推荐给 Lee；若在别处看到同一来源，知道已被判过即可。找新情报是 leex 的活，Grok 不用管这份名单的更新。**「只是看看」的有结论和经验可参考，但没有现成东西可搬；标（不对口）的是与期权交易和本项目无关、已被范围关沉底的。导出时间：2026-11-17（含第二轮深挖）。共 284 条（站内另有 32 条未在此名单：26 条最早入库的低分条目与 6 条已划掉的 OptraBot 重复条目，均不在能用目录内）。
+共 292 条，一行一条。这些是备查与低优先条目；另有少数最早入库的低分条目与已划掉条目未收进本目录，站内总数以情报站为准。
 
-
-## 只是看看（144 条）
-
-- 【55 分】股指期权怎么做，又怎么防大亏 — https://arxiv.org/pdf/2407.13908
-- 【55 分】AI炒东西也会跟风，把价格炒上天 — https://www1.se.cuhk.edu.hk/~nchenweb/Publications/ssrn-6426761.pdf
-- 【55 分】AI选股到底还需不需要人盯着 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6612061
-- 【55 分】外汇套息回测里，过夜利息算错了？ — https://www.quantconnect.com/forum/discussion/5234/forex-carry-rollover-interests/
-- 【55 分】AI对冲到底学了啥，换市况就露馅 — http://arxiv.org/html/2605.21696
-- 【55 分】大家都用同一个AI炒股，会一起抢着买卖 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7458342
-- 【55 分】让AI看图猜涨跌，能看懂股票走势吗 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4996169
-- 【55 分】一份回测成绩单收益低跌幅大 — https://www.quantconnect.com/terminal/quantpediaBacktestResult/embedded_backtest_9d8073f558ef073b849ba7966878f633.html
-- 【55 分】作者提醒AI交易工具别当赚钱保证 — https://www.reviewramble.com/github-repos/tradingagents
-- 【55 分】会看自己准不准再下注的期权AI — https://lablab.build:443/ai-hackathons/alpaca-ai-trading-agents-hackathon/saadhaka/saadhak-the-calibrated-options-agent
-- 【55 分】多个AI分工干活，从找机会到下单 — https://www.r2m.ai/research/alpha-agent
-- 【55 分】盈透出了新AI，帮你查期权 — https://www.interactivebrokers.com/campus/ibkr-quant-news/an-ai-options-research-workflow-with-the-ibkr-ai-integration/
-- 【55 分】不用写代码，也能自动做期权交易 — https://optionalpha.com/compare/option-alpha-vs-quantconnect-options-backtesting-automation
-- 【55 分】期权自动下单跑通了，他先拿假钱练 — https://www.quantconnect.com/forum/discussion/1687
-- 【55 分】当天到期期权为啥突然火了 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4724972
-- 【55 分】当天期权的价格有自己的脾气 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4701401
-- 【55 分】这个平台测不了标普和罗素期权回测 — https://www.quantconnect.com/forum/discussion/16554/how-to-use-rut-index/
-- 【55 分】手动调回测容易自欺，电脑找规律反而更好 — https://www.quantconnect.com/forum/discussion/1405/non-linear-machine-learning-classifiers-outperform-manual-backtesting-due-to-overfitting/p1
-- 【55 分】让AI给期权排队，专挑保费收得值的 — https://arxiv.org/pdf/2608.24786v1
-- 【55 分】白天价格突然跳一下，当天期权最怕这个 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5223127
-- 【55 分】视频讲GEX和摩根大通的大单 — https://spotgamma.com/gex-jpm-collar/
-- 【55 分】散户爱在大事前买期权，常白花钱 — https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=4050165
-- 【55 分】散户超爱当天期权，真的划算吗 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4404704
-- 【55 分】回测年赚41%但也曾跌23% — https://www.quantconnect.com/terminal/cache/embedded_backtest_8b57a0c9484baa189bdb334352549def.html
-- 【55 分】几个AI组队管期权，一起调仓 — https://arxiv.org/pdf/2509.12753
-- 【55 分】看期权价格猜涨跌，AI再做决定 — https://arxiv.org/html/2610.10407v1
-- 【55 分】用盈透自动交易先比什么 — https://brokerchampion.com/algo-trading-interactive-brokers
-- 【55 分】新手买期权从开户到到期 — https://ahkevinxy.github.io/blog/2026/11/02/options-trading-beginners
-- 【55 分】这份成绩单输得多，却赢得大 — https://www.quantconnect.com/terminal/cache/embedded_backtest_288e20fafae5a3177c67e19154c5ce1a.html
-- 【55 分】这份成绩单只测18单，还年亏26% — https://www.quantconnect.com/terminal/cache/embedded_backtest_7ea54f2b231750a2a2dac62b44bf3512.html
-- 【55 分】这份期权回测赚得慢，还曾大跌三成 — https://www.quantconnect.com/terminal/quantpediaBacktestResult/embedded_backtest_1fba4ea58d05306056e278fed1157a5d.html
-- 【55 分】这份回测赚得吓人，却差点亏光 — https://www.quantconnect.com/terminal/cache/embedded_backtest_fe1ba48cc5c86681c47854b18a39d8bf.html
-- 【55 分】先拿旧行情练一遍，再上场 — https://tastytrade.com/learn/platforms-and-tools/research/backtest/
-- 【55 分】AI自己炒股到底赚不赚钱 — https://pinggy.io/amp/blog/best_ai_trading_agents/
-- 【55 分】期权自动交易工具装之前先看要求 — https://test.pypi.org/project/optrabot/0.35.0rc3/
-- 【55 分】让程序自动买卖期权要准备啥 — https://www.quantvps.com/blog/automated-options-trading
-- 【55 分】能让AI操控电脑的工具现在啥样 — https://dev.to/devandrew/mastering-desktop-automation-the-state-of-computer-use-mcp-servers-in-2026-2dha
-- 【55 分】GLM新版开源了，先看电脑够不够用 — https://aicybr.com/blog/glm-5-3-coding-cybersecurity-release-guide
-- 【55 分】一个很懂你全部代码的编程帮手 — https://www.producthunt.com/products/augment-code?launch=augment-agent
-- 【55 分】大家吵：给AI装工具的插口要凉了吗 — https://subagentic.ai/posts/mcp-is-dead-hacker-news-debate/
-- 【55 分】MCP和技能有啥区别？这篇一次讲清 — https://www.theglitch.ai/learn/mcp-and-skills
-- 【55 分】个人AI助手大合集，好产品好玩法都在这 — https://github.com/cubxxw/awesome-personal-agent-practices
-- 【55 分】这个AI程序员，能自己把活干完 — https://www.producthunt.com/products/cosine
-- 【55 分】AI员工进公司，还要查工牌 — https://medium.com/@AIProductSignal/the-agent-era-the-agents-got-hired-badged-and-audited-cfa567c05456
-- 【55 分】程序员在论坛里都拿Claude干啥活 — https://www.aitooldiscovery.com/guides/claude-code-reddit
-- 【55 分】乐天用编程AI，上新时间少了近八成 — https://www.liezhe.com/claude-code-jiaocheng/
-- 【55 分】Claude最贵套餐没想象中耐用 — https://agmazon.com/blog/articles/technology/202609/claude-max-20x-usage-controversy-en.html
-- 【55 分】MCP到底怎么帮AI连上工具 — https://www.xhtml.jp/g/g652345/p/p7938794534
-- 【55 分】自己用的工具，有API就够了 — https://tej.as/blog/mcp-vs-api
-- 【55 分】一个人做产品，选Claude还是Codex — https://launchbuddy.com/blog/how-to-pick-a-harness-codex-vs-claude-code
-- 【55 分】OpenAI的Codex，现在到底能干啥 — https://www.bestgeneralaiagents.com/blog/openai-codex-chatgpt-coding-agent-guide-2026/
-- 【55 分】另一个老手，怎么用编程AI写代码 — https://www.solberg.is/how-i-use-claude-code
-- 【55 分】写代码这件事，已经被AI改了 — https://saewitz.com/coding-is-changed-forever
-- 【55 分】663条评论里，大家怎么用AI写代码 — https://static.rdintel.com/news/item/hn/50394444
-- 【55 分】一份能给Claude加本事的工具清单 — https://pengen.diewe.workers.dev/pwd9000/supercharge-https-github.com/appcypher/awesome-mcp-servers
-- 【55 分】Codex和Claude Code选哪个写代码 — https://www.guidetoartificialintelligence.com/en/learn/codex-claude-code-coding-agent-use/
-- 【55 分】给编程AI挑25个好用外挂工具 — https://ai.dosa.dev/best/mcp-servers-for-ai-coding
-- 【55 分】AI帮手背后的地基，正在成形 — https://blog.mpdev.dev/en/artigo/github-trending-open-source-agents-infrastructure-nov2026
-- 【53 分】SPX短线怎么看进场和出场 — https://docmcgraw.substack.com/p/how-to-scalp-spx-with-gamma-directional
-- 【53 分】GEX关键位不是涨跌预言 — https://spxgammaedge.substack.com/p/how-to-use-gex-levels-in-spx-options
-- 【53 分】看懂期权大单，猜价格为啥卡住不动 — https://dev.to/tomasz_dobrowolski_35d32c/gex-trading-guide-how-to-read-and-trade-gamma-exposure-for-spy-tsla-qqq-and-more-4j77
-- 【53 分】标普为啥突然反转，蝴蝶又该怎么押方向 — https://docmcgraw.substack.com/p/from-docs-mailbox-spx-beyond-the
-- 【53 分】午盘防线被跌破，SPX急跌117点 — https://x.com/GEXEdgeIO/status/2121298512608624654
-- 【53 分】三个AI同场考50题，谁拿第一 — https://lumichats.com/blog/grok-5-vs-chatgpt-vs-claude-honest-comparison-2026
-- 【53 分】让Claude代管Substack写作 — https://genaiunplugged.substack.com/p/the-six-substack-jobs-i-stopped-doing
-- 【53 分】最近火的7个AI项目，一次看完 — https://www.devflokers.com/blog/trending-github-repos-claude-chatgpt-projects-october-2026
-- 【53 分】Grok写代码，跟Claude比谁强 — https://swanbase.co/en/blog/grok-build-review-pricing-claude-code/
-- 【53 分】人很容易把Claude的想法当成自己的 — http://buttondown.com/nyfe/archive/the-daily-bot-oct-29-analysts-took-claude-codes/
-- 【53 分】Reddit网友怎么评价Claude — https://www.aitooldiscovery.com/guides/claude-reddit
-- 【51 分】B站小白期权课：铁鹰和当天到期全讲了 — https://www.bilibili.com/video/BV1eyy4BVEcX
-- 【51 分】官方33年账本：铁鹰跌得最浅 — https://cdn.cboe.com/resources/indices/documents/benchmarks-fact-sheet.pdf
-- 【51 分】买期权数据别只看价，便宜的不一定合用 — https://desktested.com/posts/options-data-api-comparison/
-- 【51 分】这家券商做铁鹰便宜很多 — https://yieldova.com/tastytrade-review/
-- 【51 分】印度那边咋回测期权打法 — https://algotest.in/blog/how-to-backtest-options-trading-strategies-with-examples/
-- 【51 分】大盘看着没事，里面多数股票在跌 — https://docmcgraw.substack.com/p/spx-0dte-market-report-fri-1113-ppi
-- 【51 分】期权下手前先拿旧数据试一遍 — https://www.monkeytrade.com/learn/how-to-trade/options-backtesting
-- 【51 分】这周做当天期权，只净赚了65块 — https://finris.substack.com/p/whipsaw-trading-spx-0dte-week
-- 【51 分】美联储开会那天，大盘先卡住不动 — https://docmcgraw.substack.com/p/spx-0dte-market-report-wed-1028-fed
-- 【51 分】他反着自己的判断买，反而赚更多 — https://binkus300.substack.com/p/how-i-trade-spx-0dte
-- 【51 分】新打法和25点铁鹰，两年成绩对比 — https://www.theoptionsengineer.com/research/engineered-payoff-vs-iron-condor
-- 【51 分】QuantConnect值不值得用，看完这篇再定 — https://newyorkcityservers.com/blog/quantconnect-review
-- 【51 分】七个期权回测工具哪个靠谱 — https://rankite.com/blog/best-backtesting-software-for-options
-- 【51 分】期权价格数据去哪拿有免费的 — https://www.oyamori.com/learning/options-chain-data-providers/
-- 【51 分】一百多个期权工具这里能筛 — https://stockmarketstack.com/collections/options-data
-- 【51 分】挑期权回测工具的8个选手比拼 — https://www.dombey.capital/blog/best-options-backtesting-tools
-- 【51 分】每天写代码，这两个助手谁更顺手 — https://docs.bswen.com/blog/2026-04-07-claude-code-vs-codex-daily-driver/
-- 【49 分】一条价格线，决定市场晃大晃小 — https://www.datafirsttrading.com/blog/reading-the-gamma-flip
-- 【49 分】做市商被迫买卖，会推着标普走 — https://www.traderade.com/gamma-exposure
-- 【49 分】GEX 到底看啥，一篇讲清关键位 — https://fattail.ai/gamma-exposure-gex-explained/
-- 【49 分】挑期权合约看什么？先弄懂希腊字母 — https://threadreaderapp.com/thread/1413660733385105414.html
-- 【49 分】GEX能帮你看啥，又看不了啥 — https://aistockpickerapps.com/blog/gamma-exposure
-- 【49 分】用做市商持仓看当天期权怎么做 — https://www.befreed.ai/podcast/trading-0dte-with-gamma-exposure
-- 【49 分】Tapeboard每月99美元，拿来比价了 — https://tapeboard.com/alternatives/unusual-whales
-- 【49 分】三款便宜替代品，也能看期权大单 — https://blog.tradionlabs.com/unusual-whales-alternatives/
-- 【49 分】三个看关键位的工具，差别在哪 — https://flashalpha.com/articles/options-analytics-comparison-flashalpha-spotgamma-unusual-whales
-- 【49 分】两款看大单工具，便宜的反而赢了 — https://aistockpickerapp.com/blog/cheddar-flow-vs-unusual-whales
-- 【49 分】一个月五十美元，看大单值不值 — https://insigtrade.com/blog/unusual-whales-review-2026-is-the-options-flow-worth-it
-- 【49 分】这个老牌关键位工具，评分只有五十六 — https://aistockpickerapp.com/reviews/spotgamma/deep-dive
-- 【49 分】GEX讲清做市商会怎么推价格 — https://support.spotgamma.com/hc/en-us/articles/15214161607827-GEX-Gamma-Exposure-Explained-What-It-Is-and-How-SpotGamma-Uses-It
-- 【49 分】做市商被迫买卖会把价格推哪去 — https://www.moomoo.com/my/learn/gamma-exposure-gex-understanding-dealer-hedging-flows-and-key-levels?chain_id=2SIO64edkJGdFq.1ld6775&global_content=%7B%22promote_id%22%3A14079%2C%22sub_promote_id%22%3A30%2C%22f%22%3A%22mm%2Fmy%2Flearn%2Fcalculate-stock-price-option-strategies%22%7D
-- 【49 分】真在干活的AI工具，不是摆着好看的 — https://alejandrorioja.com/top-ai-tools-to-make-you-more-productive-at-work/
-- 【49 分】免费模板合集，自动干活不用从零搭 — https://urielpapa.com/blog/free-n8n-workflow-templates-github
-- 【49 分】在自己电脑上养一队AI队友 — https://indie-machine.com/posts/appubot-desktop-ai-teammates-byoai-review
-- 【49 分】大家晒自己平时怎么用AI干活 — https://hn-client.demo-by-discourse.com/t/ask-hn-whats-your-current-ai-agentic-setup/15840
-- 【49 分】400个程序员晒出自己怎么用AI干活 — https://www.memmo.dev/blog/hn-agentic-setups-what-teams-run
-- 【49 分】编程AI怎么选，网友给了分工表 — https://diyai.io/ai-tools/reddit/best-ai-coding-tools-on-reddit/
-- 【49 分】编程帮手里网友最推Claude Code — https://www.aitooldiscovery.com/guides/best-ai-agents-reddit
-- 【48 分】散户炒期权，到底有多少人真赚钱 — https://papertradingjournal.com/2026/03/31/options-trading-statistics/
-- 【48 分】Claude管家能搬到自己家跑了 — https://www.bpinfo.ca/en/news/2026-11-12-anthropic-self-hosted-managed-agents-beta/
-- 【47 分】波动小的时候买期权，结果还是亏钱 — https://www.ivoox.com/en/market-measures-june-12-2017-is-audios-mp3_rf_19212530_1.html
-- 【47 分】卖宽跨平时赚，2020大跌加翼也亏 — http://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2025-Greece/papers/LiandMillerTheta2025.pdf
-- 【47 分】滚轮策略十年回测，赚头多半来自股票 — https://quantgt.io/research/thetagang-vs-the-index
-- 【47 分】手里有股票再卖认购，能多赚钱吗 — https://www.researchgate.net/publication/228914669_Passive_Options-Based_Investment_Strategies_The_Case_of_the_CBOE_SP_500_BuyWrite_Index
-- 【47 分】留着现金卖认沽，能多收钱吗 — https://www.researchgate.net/publication/247906423_The_Cash-secured_PutWrite_Strategy_and_Performance_of_Related_Benchmark_Indexes
-- 【47 分】两个期权工具比一比，哪个更值 — https://www.sharkquant.ai/vs/optionstrat
-- 【47 分】手里有股票又卖期权收钱，这打法咋算成绩 — https://www.dividendvision.com/learn/buy-write-index
-- 【47 分】卖认购位置会变的标普指数来了 — https://cdn.cboe.com/resources/indices/factsheet/CboeGlobalIndices_CALD-Index.pdf
-- 【47 分】买当天到期的标普期权，赚钱机会有多大 — https://tradeintel.ca/research/spx-0dte-entry-time.html
-- 【47 分】多数当天期权打法长期其实亏钱 — https://optionspilot.app/blog/0dte-options-backtesting-zero-days-expiration-strategies
-- 【47 分】他做一年标普蝴蝶胜率有七成七 — https://options.cafe/results/2024/zero-dte-spx-iron-butterflies/
-- 【47 分】当天到期的期权，为啥会涨会跌 — https://www.fmaconferences.org/Derivatives2024/52.pdf
-- 【47 分】当天期权最怕突然跳空，先算最坏情况 — https://www.thesistrading.ai/kb/opt-0dte-mechanics/
-- 【47 分】当天期权买的人太多，会不会推乱大盘 — https://www.researchgate.net/publication/377984312_0DTEs_Trading_Gamma_Risk_and_Volatility_Propagation
-- 【47 分】当天期权到底哪种打法真赚过钱 — https://beehiiv-publication-files.s3.amazonaws.com/uploads/downloadables/09cc8a00-8d50-4e69-a182-87d6c6de649e/613e190f-41f2-4ada-b6ad-73f3454b4cc3/0DTE%20Trading%20Rules.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQCMHTQSE2JGAGXHJ%2F20260720%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260720T085941Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f5a55978fbf1cb643b47d24fcc659220f60284079d412f9073a54fe413cd6d8a
-- 【47 分】做了四十多年期权的老手讲规矩 — https://ovisual.com/tom-sosnoff-0dte-short-term-options-rules/
-- 【47 分】铁鹰怎么赚钱最多亏多少 — https://www.optionsdecay.com/strategies/advanced/iron-condor/
-- 【47 分】靠期权赚钱先算清这笔账 — https://curvedtrading.com/articles/zh/trading/ruhe-kao-gupiao-qiquan-zhuanqian/
-- 【47 分】老手讲选择权：别逆势，别满仓 — https://twbook.tinynews.org/books/0010696675
-- 【47 分】视频第一课：期权咋玩，风险咋看 — https://www.bilibili.tv/ms/video/4801522717432320?bstar_from=bstar-web.ugc-video-detail.related-recommend.all
-- 【47 分】一周铁鹰复盘，周四收的钱翻倍了 — https://www.optionsdecay.com/case-studies/iron-condor-week-2026-10-12/
-- 【45 分】铁鹰赚了，大亏全栽在不止损和赌气单上 — https://www.foolishtrader.com/day-124/
-- 【45 分】散户买期权，为啥大多在亏钱 — https://www.lsu.edu/business/files/event-files/2025-finance-mardi-gras/retail_option_trading_v2.pdf
-- 【45 分】花两万美元买教训：期权别乱买 — https://www.morningstar.com/news/marketwatch/2026022487/i-paid-20000-to-learn-hard-lessons-about-trading-options
-- 【45 分】股价没动，期权为啥先亏30美元 — https://www.linkedin.com/posts/jrgreen1_optionstrading-financialliteracy-activity-7525715271911759872-0I7M
-- 【45 分】赢了七成交易，最后还是亏光了 — https://www.doctorsab.in/posts/the-36-lakh-lesson-winning-70-losing-everything/
-- 【45 分】期权重注，怎么把账户亏光 — https://makebank.medium.com/how-options-trading-can-kill-your-bank-account-83c468b06894
-- 【45 分】卖期权基金爆仓，客户倒欠钱 — https://www.financialtechwiz.com/post/james-cordier-optionsellers/
-- 【45 分】原油账户爆红后，他定三条规矩 — https://futuresworkinggroup.com/crude-oil-margin-call-postmortem-risk-rules/
-- 【45 分】当天到期期权赚得快，亏起来也更快 — https://aistockwire.com/blog/max-pain-theta-decay-options-expiration-explained
-- 【45 分】短期期权亏钱，比想的快得多 — https://www.mutualfunds.com/options-and-income-channel/short-term-options-can-drain-your-account-faster/
-- 【45 分】两周亏掉170万加元，他还想继续炒 — https://www.ainvest.com/news/lost-1-7-million-trading-spacex-meat-options-plans-2609/
-- 【42 分】一单亏了870美元，他做了张检查表 — https://pinescriptprogramming.blogspot.com/2025/06/i-lost-870-on-one-options-tradethen.html
-- 【42 分】一千美元起步，咋亏到五万美元 — https://www.wbluep.com/blog/2026-06-11-how-traders-lose-50000-starting-with-1000-in-options
-- 【42 分】散户爱玩当天期权，其实大多在亏钱 — https://wp.lancs.ac.uk/fofi2024/files/2024/04/FoFI-2024-146-Leander-Gayda.pdf
-
-## 用处不大（140 条）
-
-- 【35 分】tastytrade好用吗费用工具一次看清 — https://www.dollarscout.net/trading/reviews/tastytrade/
-- 【35 分】Tastytrade靠谱吗？过来人说实话 — https://beststockstrategy.com/tastytrade-review/
-- 【35 分】开盘前大跌，正好砸到看跌单最厚处 — https://docmcgraw.substack.com/p/spx-0dte-market-report-thu-1112-premarket
-- 【35 分】散户最爱当天期权，可这真的赚钱吗 — https://www.fmaconferences.org/Derivatives2024/78.pdf
-- 【35 分】当天期权热了，大盘的晃动会传开吗 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4692190
-- 【35 分】SPX当天期权，各种打法最后赔赚多少 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4641356
-- 【35 分】他回测一笔看跌价差，却看不懂结果 — https://www.quantconnect.com/forum/discussion/14324/option-trading-backtesting-result-confusion/p1
-- 【35 分】有没有现成的期权工具包能借用 — https://www.quantconnect.com/forum/discussion/6047/option-strategy-utilities-modules/
-- 【35 分】期权从零学到能上手的一篇长文 — https://www.futuhk.com/blog/detail-options-tutorial-from-beginner-to-practical-fundamentals-trading-strategies-hands-on-skills-30-240405004
-- 【35 分】《3小时快学期权》电子书下载页 — https://book.qciss.net/books/28079526279
-- 【35 分】PSX这只票，上方270下方260有墙 — https://squawkflow.com/ticker/PSX
-- 【35 分】新手入门：两个编程AI到底是干啥的 — https://benmore-brief-84rp4p.benmore.ai/claude-code-explained
-- 【35 分】一门课同时教你用两个编程AI做应用 — https://www.udemy.com/course/claude-code-x-codex-from-beginner-to-advanced-workflows/
-- 【35 分】各家编程AI工具都在卖啥，这页帮你挑 — https://agentfactory.piaic.org/building-ai-workers/agentic-coding/both-ai-vendors/
-- 【35 分】用手机指挥一队AI写代码 — https://www.einpresswire.com/article-pdf/938036896/beafk-app-launches-mobile-first-ai-coding-agent-orchestration-on-product-hunt
-- 【35 分】网友吵翻了：写代码选哪家 — https://df2hle.bfd269.com/claude-code-vs-codex-reddit/
-- 【35 分】国内也能用Claude Code，小白教程来了 — https://news.pedaily.cn/202604/562939.shtml
-- 【35 分】四小时学会用Claude Code写代码 — https://www.bilibili.com/en/video/BV1pdc2zsEk9/
-- 【35 分】AI能直接在软件里改页面了 — http://assertion.github.io/2026/11/15/ai-twitter-hots-en
-- 【35 分】DeepSeek开放本事，另有两家AI上新 — http://assertion.github.io/2026/11/14/ai-twitter-hots-en
-- 【35 分】AI帮手工具变风向，四个新品同天亮相 — https://www.aimfast.dev/reports/2026-11-13
-- 【35 分】图解版Codex安装教程，手把手带新手 — https://www.xiaohongshu.com/explore/6aedb5970000000009019467?xsec_token=AB4zfw0730Nj26yaRHgbkJ4lXhEizGIChiQRWayXZRvc8=&xsec_source=pc_search
-- 【12 分】AI交易工具到底能不能真赚钱（不对口） — https://pinggy.io/blog/best_ai_trading_agents/
-- 【12 分】他做期货亏了5万美元的复盘（不对口） — https://alpha-futures.com/interviews/jayden-50k-options-loss-alpha-futures
-- 【12 分】免费开源的猜涨跌机器人靠谱吗（不对口） — https://botbinaryoptions.com/en/about.html
-- 【12 分】这个伽马是治癌检查，不是炒期权的（不对口） — https://jksus.org/an-open-source-software-for-calculating-1d-gamma-index-in-radiation-therapy/
-- 【12 分】做期货多了个快通道，在QuantConnect上（不对口） — https://www.quantconnect.com/brokerages/trading-technologies
-- 【12 分】交易程序能直接往Public账户下单了（不对口） — https://www.quantconnect.com/forum/discussion/21090
-- 【12 分】黄金也能用开盘突破法，改一行代码就行（不对口） — https://www.quantconnect.com/forum/discussion/17175
-- 【12 分】这周 GitHub 最火的项目都在卷啥（不对口） — https://blog.mpdev.dev/en/artigo/github-trending-open-source-agents-infrastructure-nov11-2026
-- 【12 分】超大开源AI放出来了，能记超长文（不对口） — https://explainx.ai/blog/reflection-beam-501b-open-weights-released-hugging-face-apache-2026
-- 【12 分】九个真省时间的AI工具，别乱装一堆（不对口） — https://contextbolt.com/blog/ai-productivity-tools/
-- 【12 分】开源AI主播，能在B站抖音自己直播（不对口） — https://typefully.com/liangwenhao3/UQZKkuh
-- 【12 分】把B站视频存成能搜的笔记（不对口） — https://www.cnblogs.com/southtwilight/p/23393047/bilibili-digest-desktop
-- 【12 分】这个工具让你自己决定刷什么（不对口） — https://blog.mushroom.cv/blog/openbiliclaw-open-source-bilibili-recommendation-system-reversal/
-- 【12 分】14个热门AI帮手工具一次看完（不对口） — https://www.nocobase.com/en/blog/github-open-source-ai-agent-tools-16
-- 【12 分】邮箱日历笔记，全塞进一个AI台子（不对口） — https://www.hunted.space/dashboard/stitch-ai
-- 【12 分】没有屏幕的AI小机器，12月要卖了（不对口） — https://whatscrack.in/stories/nothings-screenless-ai-device-launches-in-december-a-tool-without-a-screen/
-- 【12 分】AI盯着买家信号，自动约销售电话（不对口） — https://webmail.hunted.space/dashboard/alsona
-- 【12 分】用好几个AI工具，每周能省几十小时（不对口） — https://tips.mojok.co/mastering-top-ai-platform-productivity-hacks/
-- 【12 分】DeepSeek新版正式发布，干活能力变强（不对口） — http://dell.huggingface.co/models/deepseek-ai/DeepSeek-V4-Pro-0813
-- 【12 分】十三个AI帮手，能帮你自动干活（不对口） — https://clickup.com/blog/ai-agents-for-productivity/
-- 【12 分】最近六周新出的八个AI小工具（不对口） — https://useaitools.me/blog/new-ai-tools-late-october-2026
-- 【12 分】2026年好用的AI效率工具清单更新了（不对口） — https://AFFiNE.pro/blog/10-best-ai-productivity-tools-must-know-upgrade-workflow-improve-business
-- 【12 分】B站开源了翻译和配音的AI工具（不对口） — https://hokai.io/hub/companies/bilibili
-- 【12 分】有个AI会猜你爱看啥，再全网帮你找（不对口） — https://heatdrop.ai/repo/whiteguo233/OpenBiliClaw
-- 【12 分】能自己装的视频总结工具来了（不对口） — https://hysenlabs.com/projects/jimmylv-bibigpt-v1
-- 【12 分】AI帮你投简历，还能看进度表（不对口） — https://github.com/DanielPan12/JobHuntBot
-- 【12 分】一行命令，让AI能上网搜消息（不对口） — https://www.vgoodslab.com/agent-reach-ai-agent-browsing/
-- 【12 分】OpenClaw到底是啥，有啥平替（不对口） — https://skywork.ai/skypage/en/reddit-openclaw-guide/2036762982576918528
-- 【12 分】会飞的猫在浏览器里打架抢猫薄荷（不对口） — https://bunpav.com/blog/catcopter-multiplayer-flying-cat-browser-game-hacker-news-october-2026
-- 【12 分】20个热门免费AI项目大盘点（不对口） — https://ainotes.us/summary/top-open-source-github-projects-autogpt-capptivo-anydoc-swiftlet-waku-agent-morp
-- 【12 分】让Claude直接刷推特发推特（不对口） — https://composio.dev/toolkits/twitter
-- 【12 分】另一个连推特工具，主打先审再发（不对口） — https://pypi.org/project/x-use-mcp/3.2.0/
-- 【12 分】X官方出推特插头，功能有200多个（不对口） — https://a2a-mcp.org/entry/xmcp
-- 【12 分】帮AI把小作品放到网上的手册（不对口） — https://eliteai.tools/agent-skills/hugging-face-space-deployer-1
-- 【12 分】10个能直接玩的AI小作品推荐（不对口） — https://futuresmart.ai/blog/top-10-spaces-on-hugging-face-you-dont-want-to-miss
-- 【12 分】大家在聊去年最好用的编程工具（不对口） — https://www.producthunt.com/p/producthunt/best-developer-tools-launched-on-product-hunt-in-2025
-- 【12 分】新平台说几句话就能再教AI（不对口） — https://www.launchvideo.com/directory/trajectory
-- 【12 分】一个超火的AI助手开源项目讲解（不对口） — https://crewclaw.com/blog/openclaw-ai-agent-github-guide
-- 【12 分】让AI能看懂视频和论坛帖子（不对口） — https://theaileverage.beehiiv.com/p/the-agent-reach-safe-setup-kit
-- 【12 分】网友最推荐的私人AI助手是哪款（不对口） — https://www.oneclaw.net/blog/personal-ai-agents-reddit
-- 【12 分】让AI借真手机和真电脑干活（不对口） — https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-11-06/
-- 【12 分】Mimzie：不绑死Claude的AI工作台（不对口） — https://www.whatshappeninginai.com/trend/show-hn-mimzie-an-agent-neutral-alternative-to-the-claude-suite-claude-cowork
-- 【12 分】Kimi新版能一次看完超长的资料（不对口） — https://hn.hellmo.de/en/posts/2026/10/2026-10-23/
-- 【12 分】网友热议AI小帮手们的兴衰故事（不对口） — https://www.systemreport.net/posts/2026-08-30-hacker-news-reacts-to-ai-agents-tencent-hy4-and-arxivlabs-fca15d/
-- 【12 分】给AI装个B站工具，搜视频看弹幕都行（不对口） — https://glama.ai/mcp/servers/only3412/bilibili-mcp-agent
-- 【12 分】这个工具专盯一个B站UP主来分析（不对口） — https://mcpmarket.cn/server/6951ab1aaa5ba167282bac6f
-- 【12 分】X官方出工具，AI能直接看实时动态（不对口） — https://news.aibase.com/news/29291
-- 【12 分】给AI装个管家，帮品牌管社交账号（不对口） — https://dev.to/adifsgaid/we-built-an-mcp-server-that-runs-a-brands-social-media-4cah
-- 【12 分】给 Muse 装个推特小管家（不对口） — https://www.corpusiq.io/docs/hermes/mcp/servers/external/opentweet-mcp
-- 【12 分】20个开源工具，语音项目很抢眼（不对口） — https://ainotes.us/summary/trending-open-source-github-projects-voicestudio-heretic-openwhispr-axolotl-neo-
-- 【12 分】35个热门项目，防假和界面都有（不对口） — https://ainotes.us/summary/github-trending-today-48-reverify-keslr-connect-anti-slop-boardui-ffmpeg-skill-c
-- 【12 分】35个热门项目，编程AI占不少（不对口） — https://ainotes.us/summary/github-trending-today-49-sol-pi-viserys-agent-edge0-mac-duo-artemis-rune-yoink-o
-- 【12 分】写订阅长文的免费工具清单（不对口） — https://careercompass1.substack.com/p/the-free-writing-tools-every-substack
-- 【12 分】有个网站能免费试五万多个AI（不对口） — https://www.guidetoartificialintelligence.com/en/learn/hugging-face-try-models-there/
-- 【12 分】不懂技术也能给AI做试玩页（不对口） — https://jsoma.github.io/ai-workbook-sample/demos/020-auto-spaces.html
-- 【12 分】给Claude装个YouTube接口（不对口） — https://hexmos.com/freedevtools/mcp/apis-and-http-requests/sparfenyuk--mcp-youtube/
-- 【12 分】AI助手变成能排班干活的同事（不对口） — https://www.zoaso.com/en/blog/product-weekly-2026-11-06/
-- 【12 分】Cursor出了给编程AI用的代码仓库（不对口） — https://www.producthunt.com/products/cursor?launch=cursor-glass&page=6
-- 【12 分】Zerion工具让AI帮你查加密钱包（不对口） — https://developers.zerion.io/build-with-ai/zerion-cli
-- 【12 分】Tulvo想用一个工作台管好所有活（不对口） — https://www.producthunt.com/products/tulvo
-- 【12 分】AppsFlyer给做广告的人加了AI帮手（不对口） — https://www.businesswire.com/news/home/20261112765585/en/AppsFlyer-Expands-Agentic-AI-and-MCP-Tools-to-Empower-Marketers-with-Trusted-Automation
-- 【12 分】这个贴身AI会先把你的生活摸透（不对口） — https://www.launchvideo.com/directory/quest
-- 【12 分】Grok机器人正式进办公室群聊了（不对口） — https://www.launchvideo.com/directory/xai-3
-- 【12 分】她每天发7条短文靠这套AI工具（不对口） — https://carrieloranger.com/blog/best-substack-ai-workflow-2026
-- 【12 分】用Gradio把AI作品摆上网展示（不对口） — https://www.tekmagazine.net/showcase-your-projects-in-spaces-using-gradio/
-- 【12 分】免费把AI小应用放上网的方法（不对口） — https://www.ainomam.com/post/huggingface-spaces-guide-20260811
-- 【12 分】原帖在这：大家都怎么用AI干活？（不对口） — https://www.xhtml.jp/g/g652345/p/p9337776484?ui_lang=en&content_lang=en
-- 【12 分】Reddit没有官方MCP，这篇告诉你有啥替代（不对口） — https://www.usecarly.com/blog/reddit-mcp/
-- 【12 分】2642个AI工具整理好了，想找啥直接搜（不对口） — https://awesomelist.link/lists/awesome-chatgpt-repositories/
-- 【12 分】写代码时，AI在旁边帮你补下一行（不对口） — https://www.producthunt.com/products/github-copilot?ref=dailyflair.com&launch=github-copilot-coding-agent
-- 【12 分】给Claude装上手，能管YouTube了（不对口） — https://composio.dev/toolkits/youtube
-- 【12 分】手把手教你给AI连上YouTube（不对口） — https://fast.io/resources/mcp-server-for-youtube/
-- 【12 分】一句话扒完一千个视频的字幕（不对口） — https://bulktranscripts.co/youtube-mcp-server
-- 【12 分】AI助手走出聊天框，去上班了（不对口） — https://aibusinessweekly.net/p/ai-agent-news
-- 【12 分】一个能下载回家的大AI来了（不对口） — https://www.llms.blog/posts/mistral-large-4-open-weights-hugging-face
-- 【12 分】能读懂基因又不外传数据的AI（不对口） — https://www.cyberiack.com/en/articles/hugging-face-releases-an-open-ai-that-reads-dna-without-data-ever-leaving-the/
-- 【12 分】把你订的几个AI变成一队干活的同事（不对口） — https://www.producthunt.com/products/rerun-2/launches/rerun-4
-- 【12 分】学习平台Docebo也上线了AI帮手（不对口） — https://itbrief.com.au/story/docebo-launches-ai-agents-knowledge-search-for-learn
-- 【12 分】现在能让Claude帮你管X上的广告了（不对口） — https://adkit.so/features/ads-mcp/x
-- 【12 分】在X评论区就能喊出Grok问事（不对口） — https://ryansdistrict.com/boards/index.php?topic=632999.0
-- 【12 分】给AI用的云端模拟器，不挑电脑系统（不对口） — https://www.hunted.space/dashboard/expo
-- 【12 分】说一句话，AI就帮你搭好工作台（不对口） — https://www.hunted.space/dashboard/tulvo
-- 【12 分】Claude和Grok实测谁更好用（不对口） — https://wf.lindy.ai/blog/claude-vs-grok
-- 【12 分】这周AI新功能到底改了啥（不对口） — https://www.ai.joaoqueiros.com/blog/paul-lipsky-claude-duet-dots-grok-bot-google-updates
-- 【12 分】四个AI回答牙科难题谁最准（不对口） — https://mdpi-res.com/d_attachment/healthcare/healthcare-13-02615/article_deploy/healthcare-13-02615.pdf?version=1760700333
-- 【12 分】给Claude装个发推特的新本事（不对口） — https://terminalskills.io/skills/twitter-x-marketing
-- 【12 分】英伟达把车载AI放到网上了（不对口） — https://www.tokenpost.com/news/technology/54222
-- 【12 分】有个AI能同时读懂DNA和人话（不对口） — https://www.spke.com/en/ai/article/4890
-- 【12 分】三条AI新闻：Claude又更新了（不对口） — https://blog.jls42.org/en/news/ia-actualites-22-oct-2026
-- 【12 分】给AI租真苹果手机和电脑（不对口） — https://www.hunted.space/product/glasshand
-- 【12 分】让AI自己开浏览器写稿发稿（不对口） — https://www.x-cmd.com/ja/install/agent-browser/
-- 【12 分】客服平台让你自带AI，按效果付钱（不对口） — https://diginomica.com/choose-your-own-agent-says-zendesk-and-pay-us-outcomes
-- 【12 分】招聘AI自己办事，但不能越界（不对口） — https://www.prnewswire.com/news-releases/ceipal-launches-ceipal-ora-its-agentic-ai-for-staffing-and-recruiting-302934034.html
-- 【12 分】免费开源的读基因AI来了（不对口） — https://technosports.co.in/hugging-face-carbon-dna-model/
-- 【12 分】读基因AI能猜基因变化的影响（不对口） — https://cryptobriefing.com/hugging-face-carbon-dna-ai-model/
-- 【12 分】Sui给AI助手加了个查证件的门卫（不对口） — https://coinfomania.com/sui-launches-new-ai-agent-technology-to-ensure-authority/
-- 【12 分】Grok先开放给老牌付费用户（不对口） — http://aimarketingnewstoday.com/twitter-xs-ai-chatbot-grok-is-rolling-out-to-premium-subscribers/
-- 【12 分】一个AI产品拿了当天人气第一（不对口） — https://www.producthunt.com/p/scroogefrog-ai-antifraud/we-did-it-1-product-of-the-day-on-product-hunt
-- 【12 分】AI销售帮你找出想买的客户（不对口） — https://webmail.hunted.space/product/alsona
-- 【12 分】说几句话就能让助手剪视频（不对口） — https://www.whizsky.com/news/edit-videos-ai-claude-code-codex
-- 【12 分】把手头几个助手拼成团队（不对口） — https://www.producthunt.com/products/rerun-2?comment=6005561
-- 【12 分】给自家产品装个智能助手（不对口） — https://webmail.hunted.space/dashboard/open-for-sales
-- 【12 分】会计活演示一遍就能自动做（不对口） — https://webmail.hunted.space/product/latch-ai-2
-- 【12 分】三款AI工具又出新功能了（不对口） — https://cms.maxassistant.app/en/news/releases/ai-radar-2026-11-11/
-- 【12 分】有个热门工具，能让AI自己刷小红书（不对口） — https://post.smzdm.com/p/a6zp5g30/
-- 【12 分】给AI装个知乎技能，问啥它再去查（不对口） — https://www.typingmind.com/skills/xiewxx-zhihu-pro
-- 【12 分】知乎引流助手，填好资料就自动答题（不对口） — https://www.927zy.com/2026/11/06/%e6%97%a5%e5%bc%95%e6%b5%81300%ef%bc%8c%e7%9f%a5%e4%b9%8eai%e5%bc%95%e6%b5%81%e5%8a%a9%e6%89%8b%ef%bc%8c%e5%a1%ab%e5%a5%bd%e4%ba%a7%e5%93%81%e8%b5%84%e6%96%99%e8%87%aa%e5%8a%a8%e8%b7%91%ef%bc%8c/
-- 【12 分】挑搭AI帮手的工具，这篇列了35个（不对口） — https://learn.ynteractive.com/content/ai-tools/ai-agents
-- 【12 分】本周10个新AI工具，三个能在自己电脑跑（不对口） — https://www.thetoolnerd.com/p/10-new-ai-tools-this-week-sentient
-- 【12 分】Zendesk给AI帮手做了一本电话簿（不对口） — https://www.cxnetwork.com/cx-service-support/news/zendesk-launches-public-directory-to-help-ai-agents-find-a2a-service-options-for-customers
-- 【12 分】HuggingFace的画图工具包出新版了（不对口） — https://rubric.hrih.si/editions/2026-10-24/22/
-- 【12 分】苹果电脑上能本地跑的语音和判断工具（不对口） — https://news.superbuddy.cloud/dossier/huggingface-anyspeech-anydecision-apple-silicon
-- 【12 分】苹果本地语音工具公布了版本号（不对口） — https://www.accessallgpt.com/research/hugging-face-anyspeechrecognizer-anydecisionmodel-swift-coreml-speech-decisions-launch
-- 【12 分】让AI自己去刷黑客新闻，还能总结（不对口） — https://composio.dev/toolkits/hackernews/framework/open-ai-agents-sdk
-- 【12 分】AI查黑客新闻的新工具，用一次付一次（不对口） — https://glama.ai/mcp/connectors/com.genexxis/data-apis/tools/hn_hackernews
-- 【12 分】Grok Bot来了，AI要组队干活了（不对口） — https://wwevents.fun/2026/11/13/grok-bot-1-0-launches-true-ai-teammates-arrive-🚀/
-- 【12 分】Frevana上线：AI陪整个团队一起干活（不对口） — https://www.producthunt.com/products/frevana-2
-- 【12 分】人和AI在同一块画布上做网页（不对口） — https://www.hunted.space/dashboard/agentgrid-io
+- [4] AI帮手背后的地基，正在成形 — https://blog.mpdev.dev/en/artigo/github-trending-open-source-agents-infrastructure-nov2026（reference，55 分）
+- [11] 做市商被迫买卖会把价格推哪去 — https://www.moomoo.com/my/learn/gamma-exposure-gex-understanding-dealer-hedging-flows-and-key-levels?chain_id=2SIO64edkJGdFq.1ld6775&global_content=%7B%22promote_id%22%3A14079%2C%22sub_promote_id%22%3A30%2C%22f%22%3A%22mm%2Fmy%2Flearn%2Fcalculate-stock-price-option-strategies%22%7D（reference，49 分）
+- [13] GEX讲清做市商会怎么推价格 — https://support.spotgamma.com/hc/en-us/articles/15214161607827-GEX-Gamma-Exposure-Explained-What-It-Is-and-How-SpotGamma-Uses-It（reference，49 分）
+- [14] 挑期权回测工具的8个选手比拼 — https://www.dombey.capital/blog/best-options-backtesting-tools（reference，51 分）
+- [19] 给编程AI挑25个好用外挂工具 — https://ai.dosa.dev/best/mcp-servers-for-ai-coding（reference，55 分）
+- [20] Codex和Claude Code选哪个写代码 — https://www.guidetoartificialintelligence.com/en/learn/codex-claude-code-coding-agent-use/（reference，55 分）
+- [24] 一百多个期权工具这里能筛 — https://stockmarketstack.com/collections/options-data（reference，51 分）
+- [25] 期权价格数据去哪拿有免费的 — https://www.oyamori.com/learning/options-chain-data-providers/（reference，51 分）
+- [26] 七个期权回测工具哪个靠谱 — https://rankite.com/blog/best-backtesting-software-for-options（reference，51 分）
+- [28] 让程序自动买卖期权要准备啥 — https://www.quantvps.com/blog/automated-options-trading（reference，55 分）
+- [37] 期权自动交易工具装之前先看要求 — https://test.pypi.org/project/optrabot/0.35.0rc3/（reference，55 分）
+- [39] AI自己炒股到底赚不赚钱 — https://pinggy.io/amp/blog/best_ai_trading_agents/（reference，55 分）
+- [53] 一份能给Claude加本事的工具清单 — https://pengen.diewe.workers.dev/pwd9000/supercharge-https-github.com/appcypher/awesome-mcp-servers（reference，55 分）
+- [56] 编程帮手里网友最推Claude Code — https://www.aitooldiscovery.com/guides/best-ai-agents-reddit（reference，49 分）
+- [58] Reddit网友怎么评价Claude — https://www.aitooldiscovery.com/guides/claude-reddit（reference，53 分）
+- [67] 先拿旧行情练一遍，再上场 — https://tastytrade.com/learn/platforms-and-tools/research/backtest/（reference，55 分）
+- [70] 这个老牌关键位工具，评分只有五十六 — https://aistockpickerapp.com/reviews/spotgamma/deep-dive（reference，49 分）
+- [73] 一个月五十美元，看大单值不值 — https://insigtrade.com/blog/unusual-whales-review-2026-is-the-options-flow-worth-it（reference，49 分）
+- [74] 两款看大单工具，便宜的反而赢了 — https://aistockpickerapp.com/blog/cheddar-flow-vs-unusual-whales（reference，49 分）
+- [75] 三个看关键位的工具，差别在哪 — https://flashalpha.com/articles/options-analytics-comparison-flashalpha-spotgamma-unusual-whales（reference，49 分）
+- [80] 这份回测赚得吓人，却差点亏光 — https://www.quantconnect.com/terminal/cache/embedded_backtest_fe1ba48cc5c86681c47854b18a39d8bf.html（reference，55 分）
+- [81] 这份期权回测赚得慢，还曾大跌三成 — https://www.quantconnect.com/terminal/quantpediaBacktestResult/embedded_backtest_1fba4ea58d05306056e278fed1157a5d.html（reference，55 分）
+- [82] 图解版Codex安装教程，手把手带新手 — https://www.xiaohongshu.com/explore/6aedb5970000000009019467?xsec_token=AB4zfw0730Nj26yaRHgbkJ4lXhEizGIChiQRWayXZRvc8=&xsec_source=pc_search（low，35 分）
+- [90] 午盘防线被跌破，SPX急跌117点 — https://x.com/GEXEdgeIO/status/2121298512608624654（reference，53 分）
+- [95] 编程AI怎么选，网友给了分工表 — https://diyai.io/ai-tools/reddit/best-ai-coding-tools-on-reddit/（reference，49 分）
+- [96] 散户炒期权，到底有多少人真赚钱 — https://papertradingjournal.com/2026/03/31/options-trading-statistics/（reference，48 分）
+- [97] 人和AI在同一块画布上做网页 — https://www.hunted.space/dashboard/agentgrid-io（low，12 分）
+- [98] Frevana上线：AI陪整个团队一起干活 — https://www.producthunt.com/products/frevana-2（low，12 分）
+- [99] AI帮手工具变风向，四个新品同天亮相 — https://www.aimfast.dev/reports/2026-11-13（low，35 分）
+- [100] 三款便宜替代品，也能看期权大单 — https://blog.tradionlabs.com/unusual-whales-alternatives/（reference，49 分）
+- [101] Tapeboard每月99美元，拿来比价了 — https://tapeboard.com/alternatives/unusual-whales（reference，49 分）
+- [102] DeepSeek开放本事，另有两家AI上新 — http://assertion.github.io/2026/11/14/ai-twitter-hots-en（low，35 分）
+- [103] Grok Bot来了，AI要组队干活了 — https://wwevents.fun/2026/11/13/grok-bot-1-0-launches-true-ai-teammates-arrive-🚀/（low，12 分）
+- [104] AI能直接在软件里改页面了 — http://assertion.github.io/2026/11/15/ai-twitter-hots-en（low，35 分）
+- [105] 这份成绩单只测18单，还年亏26% — https://www.quantconnect.com/terminal/cache/embedded_backtest_7ea54f2b231750a2a2dac62b44bf3512.html（reference，55 分）
+- [106] 这份成绩单输得多，却赢得大 — https://www.quantconnect.com/terminal/cache/embedded_backtest_288e20fafae5a3177c67e19154c5ce1a.html（reference，55 分）
+- [107] QuantConnect值不值得用，看完这篇再定 — https://newyorkcityservers.com/blog/quantconnect-review（reference，51 分）
+- [108] 四小时学会用Claude Code写代码 — https://www.bilibili.com/en/video/BV1pdc2zsEk9/（low，35 分）
+- [109] 国内也能用Claude Code，小白教程来了 — https://news.pedaily.cn/202604/562939.shtml（low，35 分）
+- [111] 新打法和25点铁鹰，两年成绩对比 — https://www.theoptionsengineer.com/research/engineered-payoff-vs-iron-condor（reference，51 分）
+- [114] AI查黑客新闻的新工具，用一次付一次 — https://glama.ai/mcp/connectors/com.genexxis/data-apis/tools/hn_hackernews（low，12 分）
+- [115] 663条评论里，大家怎么用AI写代码 — https://static.rdintel.com/news/item/hn/50394444（reference，55 分）
+- [116] 让AI自己去刷黑客新闻，还能总结 — https://composio.dev/toolkits/hackernews/framework/open-ai-agents-sdk（low，12 分）
+- [120] 苹果本地语音工具公布了版本号 — https://www.accessallgpt.com/research/hugging-face-anyspeechrecognizer-anydecisionmodel-swift-coreml-speech-decisions-launch（low，12 分）
+- [121] 苹果电脑上能本地跑的语音和判断工具 — https://news.superbuddy.cloud/dossier/huggingface-anyspeech-anydecision-apple-silicon（low，12 分）
+- [122] HuggingFace的画图工具包出新版了 — https://rubric.hrih.si/editions/2026-10-24/22/（low，12 分）
+- [124] Zendesk给AI帮手做了一本电话簿 — https://www.cxnetwork.com/cx-service-support/news/zendesk-launches-public-directory-to-help-ai-agents-find-a2a-service-options-for-customers（low，12 分）
+- [125] 本周10个新AI工具，三个能在自己电脑跑 — https://www.thetoolnerd.com/p/10-new-ai-tools-this-week-sentient（low，12 分）
+- [126] 挑搭AI帮手的工具，这篇列了35个 — https://learn.ynteractive.com/content/ai-tools/ai-agents（low，12 分）
+- [130] 写代码这件事，已经被AI改了 — https://saewitz.com/coding-is-changed-forever（reference，55 分）
+- [131] 另一个老手，怎么用编程AI写代码 — https://www.solberg.is/how-i-use-claude-code（reference，55 分）
+- [135] 一周铁鹰复盘，周四收的钱翻倍了 — https://www.optionsdecay.com/case-studies/iron-condor-week-2026-10-12/（reference，47 分）
+- [136] 知乎引流助手，填好资料就自动答题 — https://www.927zy.com/2026/11/06/%e6%97%a5%e5%bc%95%e6%b5%81300%ef%bc%8c%e7%9f%a5%e4%b9%8eai%e5%bc%95%e6%b5%81%e5%8a%a9%e6%89%8b%ef%bc%8c%e5%a1%ab%e5%a5%bd%e4%ba%a7%e5%93%81%e8%b5%84%e6%96%99%e8%87%aa%e5%8a%a8%e8%b7%91%ef%bc%8c/（low，12 分）
+- [137] 给AI装个知乎技能，问啥它再去查 — https://www.typingmind.com/skills/xiewxx-zhihu-pro（low，12 分）
+- [138] 有个热门工具，能让AI自己刷小红书 — https://post.smzdm.com/p/a6zp5g30/（low，12 分）
+- [139] 两周亏掉170万加元，他还想继续炒 — https://www.ainvest.com/news/lost-1-7-million-trading-spacex-meat-options-plans-2609/（reference，45 分）
+- [141] PSX这只票，上方270下方260有墙 — https://squawkflow.com/ticker/PSX（low，35 分）
+- [144] 视频第一课：期权咋玩，风险咋看 — https://www.bilibili.tv/ms/video/4801522717432320?bstar_from=bstar-web.ugc-video-detail.related-recommend.all（reference，47 分）
+- [145] 老手讲选择权：别逆势，别满仓 — https://twbook.tinynews.org/books/0010696675（reference，47 分）
+- [146] 《3小时快学期权》电子书下载页 — https://book.qciss.net/books/28079526279（low，35 分）
+- [147] 人很容易把Claude的想法当成自己的 — http://buttondown.com/nyfe/archive/the-daily-bot-oct-29-analysts-took-claude-codes/（reference，53 分）
+- [148] 三款AI工具又出新功能了 — https://cms.maxassistant.app/en/news/releases/ai-radar-2026-11-11/（low，12 分）
+- [149] 期权从零学到能上手的一篇长文 — https://www.futuhk.com/blog/detail-options-tutorial-from-beginner-to-practical-fundamentals-trading-strategies-hands-on-skills-30-240405004（low，35 分）
+- [150] 新手买期权从开户到到期 — https://ahkevinxy.github.io/blog/2026/11/02/options-trading-beginners（reference，55 分）
+- [151] 靠期权赚钱先算清这笔账 — https://curvedtrading.com/articles/zh/trading/ruhe-kao-gupiao-qiquan-zhuanqian/（reference，47 分）
+- [152] 会计活演示一遍就能自动做 — https://webmail.hunted.space/product/latch-ai-2（low，12 分）
+- [153] 给自家产品装个智能助手 — https://webmail.hunted.space/dashboard/open-for-sales（low，12 分）
+- [154] 把手头几个助手拼成团队 — https://www.producthunt.com/products/rerun-2?comment=6005561（low，12 分）
+- [156] 用盈透自动交易先比什么 — https://brokerchampion.com/algo-trading-interactive-brokers（reference，55 分）
+- [159] 说几句话就能让助手剪视频 — https://www.whizsky.com/news/edit-videos-ai-claude-code-codex（low，12 分）
+- [162] 看期权价格猜涨跌，AI再做决定 — https://arxiv.org/html/2610.10407v1（reference，55 分）
+- [163] 几个AI组队管期权，一起调仓 — https://arxiv.org/pdf/2509.12753（reference，55 分）
+- [165] AI销售帮你找出想买的客户 — https://webmail.hunted.space/product/alsona（low，12 分）
+- [166] 一个AI产品拿了当天人气第一 — https://www.producthunt.com/p/scroogefrog-ai-antifraud/we-did-it-1-product-of-the-day-on-product-hunt（low，12 分）
+- [167] Grok先开放给老牌付费用户 — http://aimarketingnewstoday.com/twitter-xs-ai-chatbot-grok-is-rolling-out-to-premium-subscribers/（low，12 分）
+- [168] Sui给AI助手加了个查证件的门卫 — https://coinfomania.com/sui-launches-new-ai-agent-technology-to-ensure-authority/（low，12 分）
+- [169] Claude管家能搬到自己家跑了 — https://www.bpinfo.ca/en/news/2026-11-12-anthropic-self-hosted-managed-agents-beta/（reference，48 分）
+- [170] 回测年赚41%但也曾跌23% — https://www.quantconnect.com/terminal/cache/embedded_backtest_8b57a0c9484baa189bdb334352549def.html（reference，55 分）
+- [173] 铁鹰怎么赚钱最多亏多少 — https://www.optionsdecay.com/strategies/advanced/iron-condor/（reference，47 分）
+- [174] 读基因AI能猜基因变化的影响 — https://cryptobriefing.com/hugging-face-carbon-dna-ai-model/（low，12 分）
+- [176] 免费开源的读基因AI来了 — https://technosports.co.in/hugging-face-carbon-dna-model/（low，12 分）
+- [180] 招聘AI自己办事，但不能越界 — https://www.prnewswire.com/news-releases/ceipal-launches-ceipal-ora-its-agentic-ai-for-staffing-and-recruiting-302934034.html（low，12 分）
+- [181] 客服平台让你自带AI，按效果付钱 — https://diginomica.com/choose-your-own-agent-says-zendesk-and-pay-us-outcomes（low，12 分）
+- [183] 让AI自己开浏览器写稿发稿 — https://www.x-cmd.com/ja/install/agent-browser/（low，12 分）
+- [184] 短期期权亏钱，比想的快得多 — https://www.mutualfunds.com/options-and-income-channel/short-term-options-can-drain-your-account-faster/（reference，45 分）
+- [185] Grok写代码，跟Claude比谁强 — https://swanbase.co/en/blog/grok-build-review-pricing-claude-code/（reference，53 分）
+- [186] 给AI租真苹果手机和电脑 — https://www.hunted.space/product/glasshand（low，12 分）
+- [193] OpenAI的Codex，现在到底能干啥 — https://www.bestgeneralaiagents.com/blog/openai-codex-chatgpt-coding-agent-guide-2026/（reference，55 分）
+- [194] 散户超爱当天期权，真的划算吗 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4404704（reference，55 分）
+- [195] 散户爱在大事前买期权，常白花钱 — https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=4050165（reference，55 分）
+- [197] 每天写代码，这两个助手谁更顺手 — https://docs.bswen.com/blog/2026-04-07-claude-code-vs-codex-daily-driver/（reference，51 分）
+- [198] 一个人做产品，选Claude还是Codex — https://launchbuddy.com/blog/how-to-pick-a-harness-codex-vs-claude-code（reference，55 分）
+- [199] 网友吵翻了：写代码选哪家 — https://df2hle.bfd269.com/claude-code-vs-codex-reddit/（low，35 分）
+- [200] 做了四十多年期权的老手讲规矩 — https://ovisual.com/tom-sosnoff-0dte-short-term-options-rules/（reference，47 分）
+- [202] 有没有现成的期权工具包能借用 — https://www.quantconnect.com/forum/discussion/6047/option-strategy-utilities-modules/（low，35 分）
+- [203] 他回测一笔看跌价差，却看不懂结果 — https://www.quantconnect.com/forum/discussion/14324/option-trading-backtesting-result-confusion/p1（low，35 分）
+- [205] 自己用的工具，有API就够了 — https://tej.as/blog/mcp-vs-api（reference，55 分）
+- [206] MCP到底怎么帮AI连上工具 — https://www.xhtml.jp/g/g652345/p/p7938794534（reference，55 分）
+- [207] 他反着自己的判断买，反而赚更多 — https://binkus300.substack.com/p/how-i-trade-spx-0dte（reference，51 分）
+- [208] 美联储开会那天，大盘先卡住不动 — https://docmcgraw.substack.com/p/spx-0dte-market-report-wed-1028-fed（reference，51 分）
+- [209] 这周做当天期权，只净赚了65块 — https://finris.substack.com/p/whipsaw-trading-spx-0dte-week（reference，51 分）
+- [210] 视频讲GEX和摩根大通的大单 — https://spotgamma.com/gex-jpm-collar/（reference，55 分）
+- [212] 三条AI新闻：Claude又更新了 — https://blog.jls42.org/en/news/ia-actualites-22-oct-2026（low，12 分）
+- [213] 有个AI能同时读懂DNA和人话 — https://www.spke.com/en/ai/article/4890（low，12 分）
+- [214] 英伟达把车载AI放到网上了 — https://www.tokenpost.com/news/technology/54222（low，12 分）
+- [217] 期权下手前先拿旧数据试一遍 — https://www.monkeytrade.com/learn/how-to-trade/options-backtesting（reference，51 分）
+- [219] 给Claude装个发推特的新本事 — https://terminalskills.io/skills/twitter-x-marketing（low，12 分）
+- [220] Claude最贵套餐没想象中耐用 — https://agmazon.com/blog/articles/technology/202609/claude-max-20x-usage-controversy-en.html（reference，55 分）
+- [221] 用手机指挥一队AI写代码 — https://www.einpresswire.com/article-pdf/938036896/beafk-app-launches-mobile-first-ai-coding-agent-orchestration-on-product-hunt（low，35 分）
+- [226] 用做市商持仓看当天期权怎么做 — https://www.befreed.ai/podcast/trading-0dte-with-gamma-exposure（reference，49 分）
+- [227] 四个AI回答牙科难题谁最准 — https://mdpi-res.com/d_attachment/healthcare/healthcare-13-02615/article_deploy/healthcare-13-02615.pdf?version=1760700333（low，12 分）
+- [228] 这周AI新功能到底改了啥 — https://www.ai.joaoqueiros.com/blog/paul-lipsky-claude-duet-dots-grok-bot-google-updates（low，12 分）
+- [229] Claude和Grok实测谁更好用 — https://wf.lindy.ai/blog/claude-vs-grok（low，12 分）
+- [230] 白天价格突然跳一下，当天期权最怕这个 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5223127（reference，55 分）
+- [231] SPX当天期权，各种打法最后赔赚多少 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4641356（low，35 分）
+- [232] 当天期权热了，大盘的晃动会传开吗 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4692190（low，35 分）
+- [233] 乐天用编程AI，上新时间少了近八成 — https://www.liezhe.com/claude-code-jiaocheng/（reference，55 分）
+- [234] 让AI给期权排队，专挑保费收得值的 — https://arxiv.org/pdf/2608.24786v1（reference，55 分）
+- [235] 当天期权到底哪种打法真赚过钱 — https://beehiiv-publication-files.s3.amazonaws.com/uploads/downloadables/09cc8a00-8d50-4e69-a182-87d6c6de649e/613e190f-41f2-4ada-b6ad-73f3454b4cc3/0DTE%20Trading%20Rules.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQCMHTQSE2JGAGXHJ%2F20260720%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260720T085941Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f5a55978fbf1cb643b47d24fcc659220f60284079d412f9073a54fe413cd6d8a（reference，47 分）
+- [236] 当天期权买的人太多，会不会推乱大盘 — https://www.researchgate.net/publication/377984312_0DTEs_Trading_Gamma_Risk_and_Volatility_Propagation（reference，47 分）
+- [237] 说一句话，AI就帮你搭好工作台 — https://www.hunted.space/dashboard/tulvo（low，12 分）
+- [238] 给AI用的云端模拟器，不挑电脑系统 — https://www.hunted.space/dashboard/expo（low，12 分）
+- [239] 在X评论区就能喊出Grok问事 — https://ryansdistrict.com/boards/index.php?topic=632999.0（low，12 分）
+- [240] 现在能让Claude帮你管X上的广告了 — https://adkit.so/features/ads-mcp/x（low，12 分）
+- [243] 学习平台Docebo也上线了AI帮手 — https://itbrief.com.au/story/docebo-launches-ai-agents-knowledge-search-for-learn（low，12 分）
+- [244] 把你订的几个AI变成一队干活的同事 — https://www.producthunt.com/products/rerun-2/launches/rerun-4（low，12 分）
+- [249] 散户爱玩当天期权，其实大多在亏钱 — https://wp.lancs.ac.uk/fofi2024/files/2024/04/FoFI-2024-146-Leander-Gayda.pdf（reference，42 分）
+- [250] 散户最爱当天期权，可这真的赚钱吗 — https://www.fmaconferences.org/Derivatives2024/78.pdf（low，35 分）
+- [251] 当天到期期权赚得快，亏起来也更快 — https://aistockwire.com/blog/max-pain-theta-decay-options-expiration-explained（reference，45 分）
+- [252] 程序员在论坛里都拿Claude干啥活 — https://www.aitooldiscovery.com/guides/claude-code-reddit（reference，55 分）
+- [253] 各家编程AI工具都在卖啥，这页帮你挑 — https://agentfactory.piaic.org/building-ai-workers/agentic-coding/both-ai-vendors/（low，35 分）
+- [254] 一门课同时教你用两个编程AI做应用 — https://www.udemy.com/course/claude-code-x-codex-from-beginner-to-advanced-workflows/（low，35 分）
+- [255] 新手入门：两个编程AI到底是干啥的 — https://benmore-brief-84rp4p.benmore.ai/claude-code-explained（low，35 分）
+- [256] 手动调回测容易自欺，电脑找规律反而更好 — https://www.quantconnect.com/forum/discussion/1405/non-linear-machine-learning-classifiers-outperform-manual-backtesting-due-to-overfitting/p1（reference，55 分）
+- [257] 这个平台测不了标普和罗素期权回测 — https://www.quantconnect.com/forum/discussion/16554/how-to-use-rut-index/（reference，55 分）
+- [258] 黄金也能用开盘突破法，改一行代码就行 — https://www.quantconnect.com/forum/discussion/17175（low，12 分）
+- [260] 大盘看着没事，里面多数股票在跌 — https://docmcgraw.substack.com/p/spx-0dte-market-report-fri-1113-ppi（reference，51 分）
+- [261] 开盘前大跌，正好砸到看跌单最厚处 — https://docmcgraw.substack.com/p/spx-0dte-market-report-thu-1112-premarket（low，35 分）
+- [262] 能读懂基因又不外传数据的AI — https://www.cyberiack.com/en/articles/hugging-face-releases-an-open-ai-that-reads-dna-without-data-ever-leaving-the/（low，12 分）
+- [263] 一个能下载回家的大AI来了 — https://www.llms.blog/posts/mistral-large-4-open-weights-hugging-face（low，12 分）
+- [264] 印度那边咋回测期权打法 — https://algotest.in/blog/how-to-backtest-options-trading-strategies-with-examples/（reference，51 分）
+- [267] GEX能帮你看啥，又看不了啥 — https://aistockpickerapps.com/blog/gamma-exposure（reference，49 分）
+- [268] 当天期权的价格有自己的脾气 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4701401（reference，55 分）
+- [269] 当天到期期权为啥突然火了 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4724972（reference，55 分）
+- [270] 当天期权最怕突然跳空，先算最坏情况 — https://www.thesistrading.ai/kb/opt-0dte-mechanics/（reference，47 分）
+- [271] 当天到期的期权，为啥会涨会跌 — https://www.fmaconferences.org/Derivatives2024/52.pdf（reference，47 分）
+- [272] AI助手走出聊天框，去上班了 — https://aibusinessweekly.net/p/ai-agent-news（low，12 分）
+- [273] AI员工进公司，还要查工牌 — https://medium.com/@AIProductSignal/the-agent-era-the-agents-got-hired-badged-and-audited-cfa567c05456（reference，55 分）
+- [277] 一句话扒完一千个视频的字幕 — https://bulktranscripts.co/youtube-mcp-server（low，12 分）
+- [278] 手把手教你给AI连上YouTube — https://fast.io/resources/mcp-server-for-youtube/（low，12 分）
+- [279] 给Claude装上手，能管YouTube了 — https://composio.dev/toolkits/youtube（low，12 分）
+- [280] 期权自动下单跑通了，他先拿假钱练 — https://www.quantconnect.com/forum/discussion/1687（reference，55 分）
+- [281] 交易程序能直接往Public账户下单了 — https://www.quantconnect.com/forum/discussion/21090（low，12 分）
+- [282] 做期货多了个快通道，在QuantConnect上 — https://www.quantconnect.com/brokerages/trading-technologies（low，12 分）
+- [283] 标普为啥突然反转，蝴蝶又该怎么押方向 — https://docmcgraw.substack.com/p/from-docs-mailbox-spx-beyond-the（reference，53 分）
+- [285] 这个AI程序员，能自己把活干完 — https://www.producthunt.com/products/cosine（reference，55 分）
+- [286] 写代码时，AI在旁边帮你补下一行 — https://www.producthunt.com/products/github-copilot?ref=dailyflair.com&launch=github-copilot-coding-agent（low，12 分）
+- [288] 最近火的7个AI项目，一次看完 — https://www.devflokers.com/blog/trending-github-repos-claude-chatgpt-projects-october-2026（reference，53 分）
+- [289] 2642个AI工具整理好了，想找啥直接搜 — https://awesomelist.link/lists/awesome-chatgpt-repositories/（low，12 分）
+- [290] 个人AI助手大合集，好产品好玩法都在这 — https://github.com/cubxxw/awesome-personal-agent-practices（reference，55 分）
+- [292] MCP和技能有啥区别？这篇一次讲清 — https://www.theglitch.ai/learn/mcp-and-skills（reference，55 分）
+- [293] Reddit没有官方MCP，这篇告诉你有啥替代 — https://www.usecarly.com/blog/reddit-mcp/（low，12 分）
+- [295] 挑期权合约看什么？先弄懂希腊字母 — https://threadreaderapp.com/thread/1413660733385105414.html（reference，49 分）
+- [297] 原帖在这：大家都怎么用AI干活？ — https://www.xhtml.jp/g/g652345/p/p9337776484?ui_lang=en&content_lang=en（low，12 分）
+- [298] 400个程序员晒出自己怎么用AI干活 — https://www.memmo.dev/blog/hn-agentic-setups-what-teams-run（reference，49 分）
+- [299] Tastytrade靠谱吗？过来人说实话 — https://beststockstrategy.com/tastytrade-review/（low，35 分）
+- [301] tastytrade好用吗费用工具一次看清 — https://www.dollarscout.net/trading/reviews/tastytrade/（low，35 分）
+- [303] 免费把AI小应用放上网的方法 — https://www.ainomam.com/post/huggingface-spaces-guide-20260811（low，12 分）
+- [304] 用Gradio把AI作品摆上网展示 — https://www.tekmagazine.net/showcase-your-projects-in-spaces-using-gradio/（low，12 分）
+- [306] 他做一年标普蝴蝶胜率有七成七 — https://options.cafe/results/2024/zero-dte-spx-iron-butterflies/（reference，47 分）
+- [307] 多数当天期权打法长期其实亏钱 — https://optionspilot.app/blog/0dte-options-backtesting-zero-days-expiration-strategies（reference，47 分）
+- [308] 她每天发7条短文靠这套AI工具 — https://carrieloranger.com/blog/best-substack-ai-workflow-2026（low，12 分）
+- [309] 让Claude代管Substack写作 — https://genaiunplugged.substack.com/p/the-six-substack-jobs-i-stopped-doing（reference，53 分）
+- [312] Grok机器人正式进办公室群聊了 — https://www.launchvideo.com/directory/xai-3（low，12 分）
+- [313] 这个贴身AI会先把你的生活摸透 — https://www.launchvideo.com/directory/quest（low，12 分）
+- [314] AppsFlyer给做广告的人加了AI帮手 — https://www.businesswire.com/news/home/20261112765585/en/AppsFlyer-Expands-Agentic-AI-and-MCP-Tools-to-Empower-Marketers-with-Trusted-Automation（low，12 分）
+- [317] Tulvo想用一个工作台管好所有活 — https://www.producthunt.com/products/tulvo（low，12 分）
+- [318] Zerion工具让AI帮你查加密钱包 — https://developers.zerion.io/build-with-ai/zerion-cli（low，12 分）
+- [320] 大家吵：给AI装工具的插口要凉了吗 — https://subagentic.ai/posts/mcp-is-dead-hacker-news-debate/（reference，55 分）
+- [323] Cursor出了给编程AI用的代码仓库 — https://www.producthunt.com/products/cursor?launch=cursor-glass&page=6（low，12 分）
+- [324] AI助手变成能排班干活的同事 — https://www.zoaso.com/en/blog/product-weekly-2026-11-06/（low，12 分）
+- [325] 看懂期权大单，猜价格为啥卡住不动 — https://dev.to/tomasz_dobrowolski_35d32c/gex-trading-guide-how-to-read-and-trade-gamma-exposure-for-spy-tsla-qqq-and-more-4j77（reference，53 分）
+- [327] 这个伽马是治癌检查，不是炒期权的 — https://jksus.org/an-open-source-software-for-calculating-1d-gamma-index-in-radiation-therapy/（low，12 分）
+- [328] 给Claude装个YouTube接口 — https://hexmos.com/freedevtools/mcp/apis-and-http-requests/sparfenyuk--mcp-youtube/（low，12 分）
+- [329] 不用写代码，也能自动做期权交易 — https://optionalpha.com/compare/option-alpha-vs-quantconnect-options-backtesting-automation（reference，55 分）
+- [333] GEX关键位不是涨跌预言 — https://spxgammaedge.substack.com/p/how-to-use-gex-levels-in-spx-options（reference，53 分）
+- [334] SPX短线怎么看进场和出场 — https://docmcgraw.substack.com/p/how-to-scalp-spx-with-gamma-directional（reference，53 分）
+- [336] 大家晒自己平时怎么用AI干活 — https://hn-client.demo-by-discourse.com/t/ask-hn-whats-your-current-ai-agentic-setup/15840（reference，49 分）
+- [337] 这家券商做铁鹰便宜很多 — https://yieldova.com/tastytrade-review/（reference，51 分）
+- [338] 不懂技术也能给AI做试玩页 — https://jsoma.github.io/ai-workbook-sample/demos/020-auto-spaces.html（low，12 分）
+- [339] 有个网站能免费试五万多个AI — https://www.guidetoartificialintelligence.com/en/learn/hugging-face-try-models-there/（low，12 分）
+- [341] 买当天到期的标普期权，赚钱机会有多大 — https://tradeintel.ca/research/spx-0dte-entry-time.html（reference，47 分）
+- [342] 写订阅长文的免费工具清单 — https://careercompass1.substack.com/p/the-free-writing-tools-every-substack（low，12 分）
+- [345] 免费开源的猜涨跌机器人靠谱吗 — https://botbinaryoptions.com/en/about.html（low，12 分）
+- [347] 盈透出了新AI，帮你查期权 — https://www.interactivebrokers.com/campus/ibkr-quant-news/an-ai-options-research-workflow-with-the-ibkr-ai-integration/（reference，55 分）
+- [348] 多个AI分工干活，从找机会到下单 — https://www.r2m.ai/research/alpha-agent（reference，55 分）
+- [349] 会看自己准不准再下注的期权AI — https://lablab.build:443/ai-hackathons/alpaca-ai-trading-agents-hackathon/saadhaka/saadhak-the-calibrated-options-agent（reference，55 分）
+- [350] 35个热门项目，编程AI占不少 — https://ainotes.us/summary/github-trending-today-49-sol-pi-viserys-agent-edge0-mac-duo-artemis-rune-yoink-o（low，12 分）
+- [351] 35个热门项目，防假和界面都有 — https://ainotes.us/summary/github-trending-today-48-reverify-keslr-connect-anti-slop-boardui-ffmpeg-skill-c（low，12 分）
+- [352] 20个开源工具，语音项目很抢眼 — https://ainotes.us/summary/trending-open-source-github-projects-voicestudio-heretic-openwhispr-axolotl-neo-（low，12 分）
+- [353] GEX 到底看啥，一篇讲清关键位 — https://fattail.ai/gamma-exposure-gex-explained/（reference，49 分）
+- [354] 做市商被迫买卖，会推着标普走 — https://www.traderade.com/gamma-exposure（reference，49 分）
+- [356] 原油账户爆红后，他定三条规矩 — https://futuresworkinggroup.com/crude-oil-margin-call-postmortem-risk-rules/（reference，45 分）
+- [357] 卖期权基金爆仓，客户倒欠钱 — https://www.financialtechwiz.com/post/james-cordier-optionsellers/（reference，45 分）
+- [358] 期权重注，怎么把账户亏光 — https://makebank.medium.com/how-options-trading-can-kill-your-bank-account-83c468b06894（reference，45 分）
+- [359] 给 Muse 装个推特小管家 — https://www.corpusiq.io/docs/hermes/mcp/servers/external/opentweet-mcp（low，12 分）
+- [360] 给AI装个管家，帮品牌管社交账号 — https://dev.to/adifsgaid/we-built-an-mcp-server-that-runs-a-brands-social-media-4cah（low，12 分）
+- [361] X官方出工具，AI能直接看实时动态 — https://news.aibase.com/news/29291（low，12 分）
+- [362] 这个工具专盯一个B站UP主来分析 — https://mcpmarket.cn/server/6951ab1aaa5ba167282bac6f（low，12 分）
+- [363] 给AI装个B站工具，搜视频看弹幕都行 — https://glama.ai/mcp/servers/only3412/bilibili-mcp-agent（low，12 分）
+- [364] 网友热议AI小帮手们的兴衰故事 — https://www.systemreport.net/posts/2026-08-30-hacker-news-reacts-to-ai-agents-tencent-hy4-and-arxivlabs-fca15d/（low，12 分）
+- [365] Kimi新版能一次看完超长的资料 — https://hn.hellmo.de/en/posts/2026/10/2026-10-23/（low，12 分）
+- [366] Mimzie：不绑死Claude的AI工作台 — https://www.whatshappeninginai.com/trend/show-hn-mimzie-an-agent-neutral-alternative-to-the-claude-suite-claude-cowork（low，12 分）
+- [370] 在自己电脑上养一队AI队友 — https://indie-machine.com/posts/appubot-desktop-ai-teammates-byoai-review（reference，49 分）
+- [371] 让AI借真手机和真电脑干活 — https://producthunt.programnotes.cn/en/p/product-hunt-daily-2026-11-06/（low，12 分）
+- [372] 他做期货亏了5万美元的复盘 — https://alpha-futures.com/interviews/jayden-50k-options-loss-alpha-futures（low，12 分）
+- [374] 网友最推荐的私人AI助手是哪款 — https://www.oneclaw.net/blog/personal-ai-agents-reddit（low，12 分）
+- [375] 让AI能看懂视频和论坛帖子 — https://theaileverage.beehiiv.com/p/the-agent-reach-safe-setup-kit（low，12 分）
+- [376] 赢了七成交易，最后还是亏光了 — https://www.doctorsab.in/posts/the-36-lakh-lesson-winning-70-losing-everything/（reference，45 分）
+- [377] 股价没动，期权为啥先亏30美元 — https://www.linkedin.com/posts/jrgreen1_optionstrading-financialliteracy-activity-7525715271911759872-0I7M（reference，45 分）
+- [380] 一个超火的AI助手开源项目讲解 — https://crewclaw.com/blog/openclaw-ai-agent-github-guide（low，12 分）
+- [381] AI交易工具到底能不能真赚钱 — https://pinggy.io/blog/best_ai_trading_agents/（low，12 分）
+- [382] 作者提醒AI交易工具别当赚钱保证 — https://www.reviewramble.com/github-repos/tradingagents（reference，55 分）
+- [385] 新平台说几句话就能再教AI — https://www.launchvideo.com/directory/trajectory（low，12 分）
+- [386] 一份回测成绩单收益低跌幅大 — https://www.quantconnect.com/terminal/quantpediaBacktestResult/embedded_backtest_9d8073f558ef073b849ba7966878f633.html（reference，55 分）
+- [389] 大家在聊去年最好用的编程工具 — https://www.producthunt.com/p/producthunt/best-developer-tools-launched-on-product-hunt-in-2025（low，12 分）
+- [390] 一个很懂你全部代码的编程帮手 — https://www.producthunt.com/products/augment-code?launch=augment-agent（reference，55 分）
+- [391] 三个AI同场考50题，谁拿第一 — https://lumichats.com/blog/grok-5-vs-chatgpt-vs-claude-honest-comparison-2026（reference，53 分）
+- [393] 10个能直接玩的AI小作品推荐 — https://futuresmart.ai/blog/top-10-spaces-on-hugging-face-you-dont-want-to-miss（low，12 分）
+- [394] 帮AI把小作品放到网上的手册 — https://eliteai.tools/agent-skills/hugging-face-space-deployer-1（low，12 分）
+- [395] X官方出推特插头，功能有200多个 — https://a2a-mcp.org/entry/xmcp（low，12 分）
+- [396] 另一个连推特工具，主打先审再发 — https://pypi.org/project/x-use-mcp/3.2.0/（low，12 分）
+- [397] 让Claude直接刷推特发推特 — https://composio.dev/toolkits/twitter（low，12 分）
+- [399] 20个热门免费AI项目大盘点 — https://ainotes.us/summary/top-open-source-github-projects-autogpt-capptivo-anydoc-swiftlet-waku-agent-morp（low，12 分）
+- [400] 一条价格线，决定市场晃大晃小 — https://www.datafirsttrading.com/blog/reading-the-gamma-flip（reference，49 分）
+- [401] 会飞的猫在浏览器里打架抢猫薄荷 — https://bunpav.com/blog/catcopter-multiplayer-flying-cat-browser-game-hacker-news-october-2026（low，12 分）
+- [403] OpenClaw到底是啥，有啥平替 — https://skywork.ai/skypage/en/reddit-openclaw-guide/2036762982576918528（low，12 分）
+- [404] 一行命令，让AI能上网搜消息 — https://www.vgoodslab.com/agent-reach-ai-agent-browsing/（low，12 分）
+- [405] 免费模板合集，自动干活不用从零搭 — https://urielpapa.com/blog/free-n8n-workflow-templates-github（reference，49 分）
+- [406] AI帮你投简历，还能看进度表 — https://github.com/DanielPan12/JobHuntBot（low，12 分）
+- [409] 能自己装的视频总结工具来了 — https://hysenlabs.com/projects/jimmylv-bibigpt-v1（low，12 分）
+- [410] 有个AI会猜你爱看啥，再全网帮你找 — https://heatdrop.ai/repo/whiteguo233/OpenBiliClaw（low，12 分）
+- [411] B站开源了翻译和配音的AI工具 — https://hokai.io/hub/companies/bilibili（low，12 分）
+- [412] 卖认购位置会变的标普指数来了 — https://cdn.cboe.com/resources/indices/factsheet/CboeGlobalIndices_CALD-Index.pdf（reference，47 分）
+- [414] 手里有股票又卖期权收钱，这打法咋算成绩 — https://www.dividendvision.com/learn/buy-write-index（reference，47 分）
+- [415] 2026年好用的AI效率工具清单更新了 — https://AFFiNE.pro/blog/10-best-ai-productivity-tools-must-know-upgrade-workflow-improve-business（low，12 分）
+- [416] 最近六周新出的八个AI小工具 — https://useaitools.me/blog/new-ai-tools-late-october-2026（low，12 分）
+- [417] 十三个AI帮手，能帮你自动干活 — https://clickup.com/blog/ai-agents-for-productivity/（low，12 分）
+- [420] 买期权数据别只看价，便宜的不一定合用 — https://desktested.com/posts/options-data-api-comparison/（reference，51 分）
+- [421] 让AI看图猜涨跌，能看懂股票走势吗 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4996169（reference，55 分）
+- [422] 大家都用同一个AI炒股，会一起抢着买卖 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7458342（reference，55 分）
+- [424] DeepSeek新版正式发布，干活能力变强 — http://dell.huggingface.co/models/deepseek-ai/DeepSeek-V4-Pro-0813（low，12 分）
+- [427] AI对冲到底学了啥，换市况就露馅 — http://arxiv.org/html/2605.21696（reference，55 分）
+- [430] 用好几个AI工具，每周能省几十小时 — https://tips.mojok.co/mastering-top-ai-platform-productivity-hacks/（low，12 分）
+- [433] 一千美元起步，咋亏到五万美元 — https://www.wbluep.com/blog/2026-06-11-how-traders-lose-50000-starting-with-1000-in-options（reference，42 分）
+- [434] 花两万美元买教训：期权别乱买 — https://www.morningstar.com/news/marketwatch/2026022487/i-paid-20000-to-learn-hard-lessons-about-trading-options（reference，45 分）
+- [435] 一单亏了870美元，他做了张检查表 — https://pinescriptprogramming.blogspot.com/2025/06/i-lost-870-on-one-options-tradethen.html（reference，42 分）
+- [436] AI盯着买家信号，自动约销售电话 — https://webmail.hunted.space/dashboard/alsona（low，12 分）
+- [437] 没有屏幕的AI小机器，12月要卖了 — https://whatscrack.in/stories/nothings-screenless-ai-device-launches-in-december-a-tool-without-a-screen/（low，12 分）
+- [439] 邮箱日历笔记，全塞进一个AI台子 — https://www.hunted.space/dashboard/stitch-ai（low，12 分）
+- [441] 散户买期权，为啥大多在亏钱 — https://www.lsu.edu/business/files/event-files/2025-finance-mardi-gras/retail_option_trading_v2.pdf（reference，45 分）
+- [442] 外汇套息回测里，过夜利息算错了？ — https://www.quantconnect.com/forum/discussion/5234/forex-carry-rollover-interests/（reference，55 分）
+- [443] 两个期权工具比一比，哪个更值 — https://www.sharkquant.ai/vs/optionstrat（reference，47 分）
+- [446] 14个热门AI帮手工具一次看完 — https://www.nocobase.com/en/blog/github-open-source-ai-agent-tools-16（low，12 分）
+- [447] 这个工具让你自己决定刷什么 — https://blog.mushroom.cv/blog/openbiliclaw-open-source-bilibili-recommendation-system-reversal/（low，12 分）
+- [448] 把B站视频存成能搜的笔记 — https://www.cnblogs.com/southtwilight/p/23393047/bilibili-digest-desktop（low，12 分）
+- [449] 开源AI主播，能在B站抖音自己直播 — https://typefully.com/liangwenhao3/UQZKkuh（low，12 分）
+- [450] 留着现金卖认沽，能多收钱吗 — https://www.researchgate.net/publication/247906423_The_Cash-secured_PutWrite_Strategy_and_Performance_of_Related_Benchmark_Indexes（reference，47 分）
+- [451] 手里有股票再卖认购，能多赚钱吗 — https://www.researchgate.net/publication/228914669_Passive_Options-Based_Investment_Strategies_The_Case_of_the_CBOE_SP_500_BuyWrite_Index（reference，47 分）
+- [452] 真在干活的AI工具，不是摆着好看的 — https://alejandrorioja.com/top-ai-tools-to-make-you-more-productive-at-work/（reference，49 分）
+- [453] 九个真省时间的AI工具，别乱装一堆 — https://contextbolt.com/blog/ai-productivity-tools/（low，12 分）
+- [455] AI选股到底还需不需要人盯着 — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6612061（reference，55 分）
+- [456] AI炒东西也会跟风，把价格炒上天 — https://www1.se.cuhk.edu.hk/~nchenweb/Publications/ssrn-6426761.pdf（reference，55 分）
+- [459] GLM新版开源了，先看电脑够不够用 — https://aicybr.com/blog/glm-5-3-coding-cybersecurity-release-guide（reference，55 分）
+- [460] 超大开源AI放出来了，能记超长文 — https://explainx.ai/blog/reflection-beam-501b-open-weights-released-hugging-face-apache-2026（low，12 分）
+- [461] 股指期权怎么做，又怎么防大亏 — https://arxiv.org/pdf/2407.13908（reference，55 分）
+- [462] 这周 GitHub 最火的项目都在卷啥 — https://blog.mpdev.dev/en/artigo/github-trending-open-source-agents-infrastructure-nov11-2026（low，12 分）
+- [465] 能让AI操控电脑的工具现在啥样 — https://dev.to/devandrew/mastering-desktop-automation-the-state-of-computer-use-mcp-servers-in-2026-2dha（reference，55 分）
+- [488] 滚轮策略十年回测，赚头多半来自股票 — https://quantgt.io/research/thetagang-vs-the-index（reference，47 分）
+- [494] 卖宽跨平时赚，2020大跌加翼也亏 — http://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2025-Greece/papers/LiandMillerTheta2025.pdf（reference，47 分）
+- [495] 官方33年账本：铁鹰跌得最浅 — https://cdn.cboe.com/resources/indices/documents/benchmarks-fact-sheet.pdf（reference，51 分）
+- [500] B站小白期权课：铁鹰和当天到期全讲了 — https://www.bilibili.com/video/BV1eyy4BVEcX（reference，51 分）
+- [501] 波动小的时候买期权，结果还是亏钱 — https://www.ivoox.com/en/market-measures-june-12-2017-is-audios-mp3_rf_19212530_1.html（reference，47 分）
+- [510] 铁鹰赚了，大亏全栽在不止损和赌气单上 — https://www.foolishtrader.com/day-124/（reference，45 分）
+- [516] 大事日期权更贵，不等于卖了就赚 — https://doi.org/10.17016/IFDP.2023.1376（reference，47 分）
+- [519] 期权量能猜股价？公开数据其实猜不准 — https://www.mit.edu/~junpan/volume.pdf（reference，47 分）
+- [520] 卖期权赚钱的钱，主要在夜里？ — https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2820264（reference，55 分）
+- [521] 散户买期权，钱大多亏在买卖价差上 — https://www.sikorskaya.net/files/Bryzgalova_Pavlova_Sikorskaya_2023.pdf（reference，47 分）
+- [522] 价格真会被钉住吗？测了两千多次 — https://www.gexmetrix.com/blog/does-gamma-pinning-actually-exist-2288-strike-touches（reference，49 分）
+- [527] 连上券商后，每笔期权交易自动晒出来 — https://thetagang.com/major（reference，47 分）
+- [528] 卖期权策略的成绩单，亏单也删不掉 — https://collective2.com/my/2ZWOP3PGS（reference，47 分）
+- [529] 晒出铁鹰逐笔账，亏钱那年也没藏 — http://www.the-lazy-trader.com/p/options-trading-results.html（reference，47 分）
