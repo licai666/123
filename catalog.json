@@ -458,6 +458,83 @@
   ]
  },
  {
+  "id": 497,
+  "title": "TradeTally v2.11.0：修复期权腿按订单分组（旧版会把不相干订单的腿串成一组），导入必须勾 Conid",
+  "title_zh": "TradeTally修好了，期权腿不再串错单",
+  "source_url": "https://github.com/GeneBO98/tradetally/releases/tag/v2.11.0",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 81,
+  "usability_tier": "direct",
+  "scope_verdict": "core",
+  "one_liner_zh": "新版按订单号分腿，导入带Conid才不会算错账",
+  "summary_zh": "TradeTally是记交易赚亏的软件。期权腿就是拼一单用的每张合约，像桌子的一条腿。新版按券商订单号分组，不再乱拼不相干的单。Conid是合约的身份证号，少了它就可能分错组。你算组合单赚亏时，分错组就会看错成绩。",
+  "use_zh": "TradeTally能按策略算铁鹰、蝴蝶的赚亏和胜率。新版按券商订单号分组，又能同步IBKR Flex成交清单。拿一笔Paper组合单带Conid导入，就能验有没有串单。",
+  "action_step_zh": "装TradeTally v2.11.0，拿Paper铁鹰试导入，带Conid核对分组。",
+  "keywords": [
+   "期权腿分组",
+   "Conid",
+   "IBKR对账",
+   "铁鹰胜率"
+  ],
+  "project_keys": [
+   "ibkr",
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 491,
+  "title": "decaf：自连 Flex Web Service 并落 SQLite 累积，对冲 Flex 只有 365 天窗口",
+  "title_zh": "这个工具帮你把盈透旧账一直存下来",
+  "source_url": "https://github.com/vjt/decaf/blob/HEAD/doc/INTERNALS.md",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 81,
+  "usability_tier": "direct",
+  "scope_verdict": "core",
+  "one_liner_zh": "decaf定期存盈透账单到本地，旧账不怕过期，方便以后对账",
+  "summary_zh": "decaf 就像自动收账的盒子，专存盈透账单；Flex 是盈透的账单下载口，SQLite 是电脑里的电子账本。它定期拉账存到本地；盈透只留 365 天，旧账也不会丢。它很较真：卖出缺了那批货的开仓时间，就报错，不瞎猜；它按先买先卖算成本，但多腿期权拼不成一整笔。",
+  "use_zh": "这条正对 IBKR 对账那摊事。装上 decaf 后，报表只读本地 SQLite，不用每次去盈透翻最近 365 天。配 Flex 查询时记得勾卖出的 Closed Lots，也就是卖掉那批货的来历，还要带 openDateTime 开仓时间，缺了就让它报错拦住；但铁鹰、蝴蝶这种多腿盈亏它拼不了，只能当账底。",
+  "action_step_zh": "把decaf装进IBKR项目，每周拉一次Flex账单存SQLite，先查卖出明细全不全",
+  "keywords": [
+   "IBKR账单",
+   "本地账本",
+   "365天窗口",
+   "卖出报错",
+   "多腿短板"
+  ],
+  "project_keys": [
+   "ibkr"
+  ]
+ },
+ {
+  "id": 490,
+  "title": "ibflex 端点迁移修复 PR #108：旧 Flex 端点被 IBKR 关闭，必须用新 AccountManagement 端点",
+  "title_zh": "IBKR关了旧门，ibflex换新地址拉单",
+  "source_url": "https://github.com/csingley/ibflex/pull/108",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 81,
+  "usability_tier": "direct",
+  "scope_verdict": "core",
+  "one_liner_zh": "ibflex换新地址了，装主干版才能拉到对账单",
+  "summary_zh": "ibflex是拉IBKR对账单的小工具，像去银行打流水。IBKR关了旧地址，旧版会一直重试，报1001也拉不到单。新版已换新地址，真账号试过能用，你做对账别再用旧版。",
+  "use_zh": "你在啃IBKR对账，正好要拉Flex对账单查有没有漏单。这次PR #108已把地址换成AccountManagement新入口。别等PyPI上架，直接装git主干版，先在Paper模拟盘试拉一次。",
+  "action_step_zh": "把ibkr项目里的ibflex换成git主干版，用现有token试拉一次Flex对账单",
+  "keywords": [
+   "ibflex",
+   "IBKR对账",
+   "旧接口关闭",
+   "无限重试"
+  ],
+  "project_keys": [
+   "ibkr"
+  ]
+ },
+ {
   "id": 468,
   "title": "ibflex — IBKR Flex 报表解析与自动下载库",
   "title_zh": "有个工具能自动下载盈透对账单",
@@ -763,6 +840,59 @@
   ],
   "project_keys": [
    "claude_tools"
+  ]
+ },
+ {
+  "id": 496,
+  "title": "open-renta 的 OptionEAE 重建算法：同质键＋多空双 FIFO 队列合并 Trades 与到期事件",
+  "title_zh": "一套办法，把期权到期账算清楚",
+  "source_url": "https://github.com/coitelo-progresivo/open-renta/blob/HEAD/docs/prd/02-csv-parsers.md",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 76,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "照这套对账法排队对单，IBKR到期仓就不容易漏算",
+  "summary_zh": "open-renta 写了一套期权对账办法。OptionEAE 就是券商记到期和行权的那张单。它把成交单和这张单按时间排队，再一笔笔核对仓位。到期只在这张单里有，它还带当天结算价。读者做 IBKR 对账时，要优先用它。",
+  "use_zh": "具体分法很细：标的编号、期权类型、行权价、到期日、乘数，五项全同才算同一仓。多头和空头各排一条队，先开的仓先平掉。这正对上 IBKR 对账和夜航社 Paper 盘：0DTE 是当天到期的期权，天天要关到期仓，照这套分法写代码就能少留假仓位。",
+  "action_step_zh": "按五项分仓、多空分队改IBKR对账代码，拿一笔已到期0DTE单试对。",
+  "keywords": [
+   "期权对账",
+   "五项分仓",
+   "先开先平",
+   "到期结算",
+   "IBKR"
+  ],
+  "project_keys": [
+   "nightwatch",
+   "ibkr"
+  ]
+ },
+ {
+  "id": 493,
+  "title": "Flex 自动下载纪律实测：重试触发未公开 token 锁定 1025（约 14 小时），1001 在两个阶段含义相反",
+  "title_zh": "IBKR拉账单乱重试，钥匙会被锁14小时",
+  "source_url": "https://github.com/simon-per/ibkr-portfolio-tracker/blob/HEAD/docs/flex-and-sync.md",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 76,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "IBKR拉账单别乱重试，不然锁14小时，照规矩对账更稳",
+  "summary_zh": "Flex是IBKR拉账单入口，token是进门钥匙。有人锁了3次钥匙，才摸清这套规矩。乱重试报1025锁约14小时，1001有时叫等、有时叫停，读者做IBKR对账正好躲坑。",
+  "use_zh": "把1秒1次、1分钟10次的限速，写进IBKR的Flex下载里。发申请那步失败就停手别重发，取账单那步报1001才接着等。token生成时把有效期设成1年，账单每天收盘后拉一次就够。",
+  "action_step_zh": "改Flex下载：限速1秒1次，失败不重发，token设1年，再跑一遍对账",
+  "keywords": [
+   "IBKR账单",
+   "Flex限速",
+   "1025锁定",
+   "别乱重试",
+   "钥匙一年"
+  ],
+  "project_keys": [
+   "ibkr"
   ]
  },
  {
@@ -1201,6 +1331,111 @@
   "project_keys": [
    "claude_tools",
    "tuijin"
+  ]
+ },
+ {
+  "id": 511,
+  "title": "LiveOption 成绩单字段级补遗：episode 六列出分（n/Mean[CI]/Med/Win/NT/PF）＋配对 sign-flip＋Holm 校正",
+  "title_zh": "期权AI成绩单补细则，成本一算就露馅",
+  "source_url": "https://arxiv.org/html/2609.33470",
+  "source_name": "arxiv.org",
+  "stream": "options",
+  "theme": "opt_ai_agents",
+  "score": 74,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "期权AI成绩单定死六列，换真实成本就露馅，夜航社可照抄防自欺",
+  "summary_zh": "这是给期权AI打分的补细则，像查账本，不能只报喜。它定死六列分数，没下单也算零分；0DTE就是当天到期的期权，像今天过期的鲜奶，滑点就是成交多付的钱。把滑点换成真实的0.005美元再算，原来赚钱的0DTE全变亏，夜航社照着用能少骗自己。",
+  "use_zh": "具体的六列是次数、平均数、中位数、胜率、没下单率、赚亏比，还要同批场次一对一比，多比几次就收紧标准。夜航社的回测就是拿过去考卷先模拟考一遍，这套表正好给Paper里的0DTE和A/B/C/D四组AI判断打分。先把没下单算零、滑点改成0.005美元，假赚钱的打法就会早露馅，Paper里也少白跑。",
+  "action_step_zh": "把六列成绩单和0.005美元滑点复算，加进夜航社Paper回测报表先试一轮。",
+  "keywords": [
+   "0DTE",
+   "成绩单六列",
+   "真实滑点",
+   "没单算零",
+   "成本翻亏"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 507,
+  "title": "KTD-Fin（2026）：十维指标面板含弃权率＋四级掩码防记忆泄漏，成本写死在执行器协议里",
+  "title_zh": "新考卷专测AI炒股，防它背答案作弊",
+  "source_url": "https://arxiv.org/html/2605.28359",
+  "source_name": "arxiv.org",
+  "stream": "options",
+  "theme": "opt_ai_agents",
+  "score": 74,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "一套给AI交易打分的考卷，夜航社评四组AI能直接借。",
+  "summary_zh": "这是一套给AI炒股的考卷，像让学生拿假钱比赛炒股，看谁真会。它打10项分，看赚亏、乱不乱买、没把握时停不停手、说得准不准；股名日期都盖住，别人反猜只猜中3%，手续费也先算死。夜航社评AI交易判断时能照着用，少被只会背题的AI骗到。",
+  "use_zh": "最值得搬的是弃权率和写错指令率，就是重试后还不出手、指令写错各占多少。把这两项加进夜航社A、B、C、D四组AI的评分表，Paper模拟盘就能看出哪组不会乱下单。它的买卖费是A股数字，期权不能照抄，但先算死成本、错单只记不偷改的做法能搬到下单环节。",
+  "action_step_zh": "把弃权率、写错指令率加进四组AI评分表，拿盖住日期的旧行情在Paper里测一轮",
+  "keywords": [
+   "AI交易考试",
+   "弃权率",
+   "防背题",
+   "十项打分",
+   "成本算死"
+  ],
+  "project_keys": [
+   "nightwatch",
+   "ibkr"
+  ]
+ },
+ {
+  "id": 506,
+  "title": "InvestorBench 成绩单口径：四指标分段表＋跑 5 次取「中位数轨迹」出分，治 LLM 随机翻号",
+  "title_zh": "给AI炒股打分：跑五次，取中间那次",
+  "source_url": "https://github.com/felis33/INVESTOR-BENCH",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_ai_agents",
+  "score": 74,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "AI炒股考五次取中间分，帮你挑AI时少被运气骗。",
+  "summary_zh": "这是一套给AI炒股打分的成绩单。打个比方，像一张体检表。只看四件事。赚多少，稳不稳。晃多凶，最惨跌多少。还要跟买入就不动比一比。每个AI考五次，只取中间那次。它没算手续费，这是个短板。",
+  "use_zh": "夜航社比A、B、C、D四组AI，正好套它。每组把随机劲定在0.6，跑五次取中间。补上手续费后，再在Paper里排座次。",
+  "action_step_zh": "把四组AI各跑五次取中间，按四项成绩在Paper里先排一轮。",
+  "keywords": [
+   "五次取中间",
+   "四项成绩",
+   "AI打分",
+   "手续费缺失",
+   "买入拿住"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 505,
+  "title": "PIXIU / FinBen 任务注册机制：一个 HF 数据集＋一个类＋注册表一行，指标按任务类型预置",
+  "title_zh": "给金融AI加新考题，只要三步",
+  "source_url": "https://github.com/The-FinAI/PIXIU",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_ai_agents",
+  "score": 74,
+  "usability_tier": "adapt",
+  "scope_verdict": "ai_use",
+  "one_liner_zh": "加金融考题只要三步，能帮你先考稳AI再进模拟盘",
+  "summary_zh": "说白了，PIXIU就是一套考金融AI的卷子。加新题只要备题库、写个类、登记一行，打分按题型现成。读者能借它考AI判断，先在Paper模拟盘里验稳不稳。",
+  "use_zh": "问题、答案、正文放一份，选答题再加选项和对的序号。夜航社四组AI判断能做成选答题，写个类填题库地址，再登记一行。拿Paper旧记录先考一遍，用现成打分比哪组更稳。",
+  "action_step_zh": "拿Paper旧判断做选答题库，写类登记一行，用eval.py跑一组试试",
+  "keywords": [
+   "PIXIU",
+   "加考题三步",
+   "题库格式",
+   "现成打分",
+   "AI判断"
+  ],
+  "project_keys": [
+   "nightwatch"
   ]
  },
  {
@@ -1998,6 +2233,32 @@
   ]
  },
  {
+  "id": 502,
+  "title": "中文 0DTE 评分体系设计稿：100 分七组权重＋许可分级＋风险单位定仓（无成绩，参数可直接对照）",
+  "title_zh": "当天期权先打100分，不够60分就别下单",
+  "source_url": "https://zeninvestor7652.substack.com/p/0dte-4fa",
+  "source_name": "substack.com",
+  "stream": "options",
+  "theme": "opt_ai_agents",
+  "score": 68,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "当天期权先打分，不够60分别做，能帮夜航社管住手",
+  "summary_zh": "这是一张当天期权打分表。0DTE就是今天到期的期权。像当天车票，过期就作废。它分成七组打分。总分100分。行情和方向各占20分。消息和波动等占余下的分。不到60分不做。60多分只看或模拟。80分以上才算好机会。作者没给回测成绩。回测就是拿旧考卷模拟考。这事还没被成绩证明过。夜航社能拿它对照现有清单。",
+  "use_zh": "夜航社做SPX铁鹰时能对这几处。铁鹰就是两边都设防。涨太猛跌太猛都会亏。先把GEX和关键位填进行情、方向这40分。GEX就是做市商压了多少货。货多，价格越容易被推着走。再照一万美元的例子定仓。每单最多亏50美元。止损线是亏25%。那这单最多买200美元。退出再看价格、结构、时间三道线。哪道先碰到就先走。60多分只放Paper模拟盘。先验够了，再谈以后上实盘。",
+  "action_step_zh": "把七组权重和60/70/80门槛写进夜航社Paper开仓清单，先跑一周打分记录",
+  "keywords": [
+   "0DTE评分",
+   "60分门槛",
+   "七组打分",
+   "定仓止损",
+   "无回测"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 429,
   "title": "量化金融开源资源清单 | 量化研究入门",
   "title_zh": "63个量化开源工具，一张清单全找齐",
@@ -2196,6 +2457,86 @@
   ],
   "project_keys": [
    "claude_tools",
+   "ibkr"
+  ]
+ },
+ {
+  "id": 509,
+  "title": "IBKR 官方：组合止损单是 IB 模拟触发（默认按组合 bid/ask），triggerMethod 配错可能永不触发",
+  "title_zh": "IB组合止损配错了，可能永远不触发",
+  "source_url": "https://www.interactivebrokers.com/docs/tws-api/doc/orders/trigger-methods",
+  "source_name": "interactivebrokers.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 66,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "IB组合止损配错就不触发，查夜航社退出单前先看它",
+  "summary_zh": "这是IB官方文档，讲组合止损单，就是几条腿打包，亏到线就一起撤。这单不归交易所管，是IB盯着整套买价卖价，自己决定要不要触发。触发方式配错就可能永远不响，行情错了或缺了也可能乱响。夜航社打包退出全靠它，它坏了，止损就等于白设。",
+  "use_zh": "具体能搬的是硬规矩：组合单的triggerMethod默认按整套买价卖价算，不是按单条腿算。三条腿以上只能按一个总价下单，不能勾Non-Guaranteed这种可能拆开成交的档，止损子单slOrderType要设PRESET。拿这几条去核对夜航社Paper里四条腿铁鹰、三条腿蝴蝶的退出单，先在模拟盘确认真能触发，为以后实盘堵住大坑。",
+  "action_step_zh": "查IBKR的Paper组合止损代码：触发方式选COMBO，子单改PRESET，再试触发",
+  "keywords": [
+   "组合止损",
+   "触发方式",
+   "IBKR",
+   "多腿订单",
+   "止损失效"
+  ],
+  "project_keys": [
+   "nightwatch",
+   "ibkr"
+  ]
+ },
+ {
+  "id": 504,
+  "title": "vnpy_optionmaster：中文开源的期权组合 Greeks 风控与 Delta 自动对冲实现（VeighNa 模块）",
+  "title_zh": "中文开源工具，帮你管一篮子期权风险",
+  "source_url": "https://www.github.com/vnpy/vnpy_optionmaster",
+  "source_name": "github.com",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 66,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "现成期权组合风控代码，借来给夜航社算总风险",
+  "summary_zh": "这是个中文开源的期权管家，叫 vnpy_optionmaster，能把一篮子期权的风险一起算清。Greeks 就是仪表盘，看价格动一下会亏多少；它照着仪表盘自动补仓，还能先演一遍大涨大跌。它接的是国内市场，不是 SPX，夜航社只能借它的算法改一改，再接进 Paper 试。",
+  "use_zh": "夜航社的铁鹰、蝴蝶有好几条腿，要看合起来的总风险才有用。它的组合 Greeks 汇总能算总账，Delta 对冲就是偏了就补一点，正好对上这件事。再借它的压力测试，把行情换成 SPX 接进 Paper，先验补仓灵不灵。",
+  "action_step_zh": "先 pip 装 vnpy_optionmaster，跑通自带测试，再拿 SPX 铁鹰试算总风险。",
+  "keywords": [
+   "vnpy",
+   "Greeks",
+   "期权组合",
+   "自动对冲",
+   "压力测试"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 492,
+  "title": "IBKR 官方 OptionEAE 字段表（含指数现金结算）与到期双记账、指派 P&L=0 两个静默算错点",
+  "title_zh": "IBKR期权到期账单有两个坑会算错钱",
+  "source_url": "https://www.clientam.com.hk/en/software/reportguide/reportguide/options_exercises_expirations_fq.htm",
+  "source_name": "clientam.com.hk",
+  "stream": "options",
+  "theme": "opt_bots",
+  "score": 66,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "IBKR期权到期账单有两处易算错，看懂能防Paper盘成绩虚高",
+  "summary_zh": "这是IBKR的OptionEAE账单说明。打个比方，它就是期权的结账单。专记到期和被指派这两类事。SPX到期直接给现金，不给股票。坑一是同一笔到期账会记两次。坑二是被指派盈亏写0，钱其实藏进股票成本了。",
+  "use_zh": "你的IBKR对账，要用OptionEAE这张表。它列了合约号、数量和实际赚亏。它和Trades交易表都选时，到期只算一遍。被指派写0不算平账，钱在股票成本里。这样Paper盘SPX的成绩才不会虚高。",
+  "action_step_zh": "改IBKR对账：到期只取OptionEAE一份，指派盈亏不单算，拿历史账单试一遍",
+  "keywords": [
+   "IBKR对账",
+   "到期双算",
+   "指派为零",
+   "现金结算",
+   "期权到期"
+  ],
+  "project_keys": [
+   "nightwatch",
    "ibkr"
   ]
  },
@@ -2552,6 +2893,32 @@
   ],
   "project_keys": [
    "claude_tools"
+  ]
+ },
+ {
+  "id": 508,
+  "title": "SWE-bench 冻结快照包结构：题面/答案/评分清单三分离，FAIL_TO_PASS＋PASS_TO_PASS 预先冻结",
+  "title_zh": "给编程AI的考卷：题面和答案分开锁",
+  "source_url": "https://www.swebench.com/SWE-bench/guides/datasets/",
+  "source_name": "swebench.com",
+  "stream": "options",
+  "theme": "opt_ai_agents",
+  "score": 64,
+  "usability_tier": "adapt",
+  "scope_verdict": "ai_use",
+  "one_liner_zh": "编程AI考卷先锁答案防作弊，推进助手验收能照着用。",
+  "summary_zh": "这就是给编程AI的冻住考卷，像先把答案锁进保险柜。一共2294道题，考生只看题面，两张判分表先定死：错的要改对，对的不能改坏，全过才算过。推进助手让编程AI改代码时，照这个分法验收，就很难作弊或自说自话。",
+  "use_zh": "它连写法都定死了：每题一行，题面给AI看，标准改法和判分清单先藏好冻住。这对上推进助手的监工验收，派活前先写好要改对啥、不能改坏啥。交活时只照清单查，全过才放行，不用再听编程AI自己打分。",
+  "action_step_zh": "拿推进助手下一单改代码任务试：开工前冻住要改对和不能改坏两张清单，交活照单验收。",
+  "keywords": [
+   "冻结考卷",
+   "题答分离",
+   "判分清单",
+   "固定环境",
+   "防作弊"
+  ],
+  "project_keys": [
+   "tuijin"
   ]
  },
  {
@@ -3415,6 +3782,32 @@
   ]
  },
  {
+  "id": 499,
+  "title": "0DTE 铁鹰 21,060 种配置全扫：扣佣金前平均每笔 −$2.08，一张铁鹰光开仓费约 $6.40",
+  "title_zh": "两万种铁鹰全试完，还是亏钱",
+  "source_url": "https://www.2manyoptions.com/guides/iron-condor-0dte",
+  "source_name": "2manyoptions.com",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 58,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "两万种铁鹰扣费前就亏，夜航社回测先算清开仓费",
+  "summary_zh": "铁鹰就是当天到期的期权，两边卖着收钱，再买远一点的防大涨大跌。有人拿三年多行情，把21060种下法全模拟考了一遍。扣费前平均每笔还亏2.08美元，夜航社先算清费用再验。",
+  "use_zh": "它试了翅膀20到55、止损1到3倍、赚50%或75%就走这几组下法。你定翅膀时别只挑平均好看的，要单看最差10%日子，那几天平均每笔亏229美元。先在Paper模拟盘按每腿1.6美元扣费重跑，验够了再谈实盘。",
+  "action_step_zh": "把每腿1.6美元加进夜航社回测，按翅膀和止损网格重扫一遍",
+  "keywords": [
+   "0DTE铁鹰",
+   "全网格回测",
+   "开仓费6.4",
+   "平均亏2美元",
+   "坏日子拖累"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 489,
   "title": "Vilkov 0DTE 规则论文的独立复现与成本纠错：扣对成本后七个结构全负",
   "title_zh": "成本算对后，当天期权打法几乎全亏",
@@ -3660,6 +4053,58 @@
    "高胜率",
    "大亏风险",
    "看跌价差"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 503,
+  "title": "《期权墙 · SPX 日内实战入门》：OI/Volume GEX 时段切换＋墙位与 VWAP 同向才动手的中文实战书",
+  "title_zh": "一本书教你按钟点看期权墙",
+  "source_url": "https://book.myspx.trade/read/appendix/",
+  "source_name": "book.myspx.trade",
+  "stream": "options",
+  "theme": "opt_gex",
+  "score": 56,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "按钟点看期权墙定翅膀，夜航社在Paper里能照着验",
+  "summary_zh": "这是一本免费中文实战书，讲SPX当天期权。GEX就是看做市商压了多少货。货堆最多的价位像堵墙，价格到了容易停。书里按钟点换墙，墙和平均买价线同向才动手。转来的数字说八成多墙守得住，但书自己没回测。",
+  "use_zh": "夜航社定翅膀能照这张钟点表：10点到15点看当天成交墙，尾盘改看存量墙。退出照三步走，赚50%先卖一半，破推力翻转位或平均买价线就全走。有大事先等15到30分钟，这套没回测，先在Paper里验够再说。",
+  "action_step_zh": "把钟点表写进夜航社：10点切成交墙，尾盘30分钟切回存量墙，先跑Paper一周。",
+  "keywords": [
+   "期权墙",
+   "时段换GEX",
+   "VWAP同向",
+   "分批退出",
+   "尾盘钉住"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 498,
+  "title": "雪球《A股期权日报》：IVR≥50 卖线＋GEX 只当环境过滤器＋分档止盈的日报框架（数据口径全公开）",
+  "title_zh": "A股期权日报：贵了才卖，赚一半就走",
+  "source_url": "https://www.xueqiu.com/3177280078/416289472",
+  "source_name": "xueqiu.com",
+  "stream": "options",
+  "theme": "opt_gex",
+  "score": 56,
+  "usability_tier": "adapt",
+  "scope_verdict": "core",
+  "one_liner_zh": "期权贵到IVR50才卖、赚一半先走，这套日报清单能搬进夜航社",
+  "summary_zh": "这是雪球上每天下午4点更新的期权日报，打个比方就是行情天气预报，盯8只A股ETF。它规矩写得很死：IVR到50以上才卖期权，IVR就是期权贵不贵在过去一年的排名。GEX只看大环境、不改进场规矩，GEX就是做市商压了多少货、会把价往哪边推。卖出后分档止盈，近月赚50%先走，远月按30%、20%、10%走，IVR掉回50以下想法就作废。标的不是SPX，但这套清单改一改就能给夜航社Paper日报用。",
+  "use_zh": "它值钱的是三条能抄的死规矩：IVR不到50不卖，近月赚50%、远月30%/20%/10%分档走，IVR掉回50以下就作废。夜航社的SPX当天到期Paper单，正缺这种卖不卖、走不走的硬线，能给每张单先写好止盈价和作废条件，再进场验。它的GEX和上下关键墙只当环境检查，别拿来改进场规矩，免得定翅膀位置时越看越乱。",
+  "action_step_zh": "把IVR≥50、分档止盈和失效条件抄进夜航社Paper日报，先跑一周看触发几次。",
+  "keywords": [
+   "贵了才卖",
+   "GEX过滤",
+   "分档止盈",
+   "期权日报",
+   "失效条件"
   ],
   "project_keys": [
    "nightwatch"
@@ -5416,6 +5861,58 @@
   ]
  },
  {
+  "id": 500,
+  "title": "B站「小白学期权」系列合集：Greeks、铁鹰搭建与风控、0DTE、波动率专题的完整中文课程",
+  "title_zh": "B站小白期权课：铁鹰和当天到期全讲了",
+  "source_url": "https://www.bilibili.com/video/BV1eyy4BVEcX",
+  "source_name": "bilibili.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 51,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "一套中文期权入门课，补铁鹰和当天到期打法正对口夜航社",
+  "summary_zh": "这是B站一套中文期权课，像新手驾校一集集教。它讲铁鹰和蝴蝶怎么搭、怎么控风险。铁鹰就是在价格两边划线，价格别出线就赚钱。还有当天到期专集和波动率专集。波动率就是价格晃得有多厉害。你夜航社正做铁鹰，这套正好补基础，但没给现成数据表。",
+  "use_zh": "对你最有用的是铁鹰搭建控风险、铁蝴蝶和当天到期这几集。当天到期那集讲进场时机和临到期风险，正对你在Paper里验SPX铁鹰的退出和止损。先挑这几集补短板，再回去检查两边划线的位置和离场规矩。",
+  "action_step_zh": "只挑铁鹰、铁蝴蝶和当天到期三集看，看完知道怎么搭和控风险就够，不用改系统",
+  "keywords": [
+   "期权入门",
+   "铁鹰搭建",
+   "0DTE",
+   "波动率",
+   "风控"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 495,
+  "title": "Cboe 官方策略指数绩效表：PUT 33 年年化 9.7%，CNDR 铁鹰最大回撤只有 −13.7%（指数不计成本）",
+  "title_zh": "官方33年账本：铁鹰跌得最浅",
+  "source_url": "https://cdn.cboe.com/resources/indices/documents/benchmarks-fact-sheet.pdf",
+  "source_name": "cdn.cboe.com",
+  "stream": "options",
+  "theme": "opt_backtest",
+  "score": 51,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "铁鹰官方账跌得最浅，能帮你检查自己的模拟成绩",
+  "summary_zh": "这是芝加哥期权交易所的官方成绩单。说白了，就是卖期权的对照答案。铁鹰就是给价格围个院子。价格待在院里就赚钱。冲出去也有保险挡着。PUT卖期权跑了33年，年均赚9.7%。CNDR铁鹰最惨只跌13.7%。同期大盘最惨跌了51%。这份账还没算手续费和税。你做模拟前，可以拿它当尺子量一量。",
+  "use_zh": "先拿它对夜航社的回测，回测就是拿过去考卷先模拟考一遍。CNDR这款月度铁鹰用20和5两档翅膀，最惨跌13.7%，PUT年赚9.7%。你的0DTE成绩若好得远超它，多半漏算手续费，先改账再进Paper模拟盘。",
+  "action_step_zh": "看完记住两个数就行：铁鹰最惨跌13.7%，且没算成本，不用动手搬。",
+  "keywords": [
+   "官方成绩单",
+   "铁鹰",
+   "卖期权",
+   "最大回撤",
+   "不计成本"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 420,
   "title": "Best Options Data API? What You're Actually Buying at Each Price",
   "title_zh": "买期权数据别只看价，便宜的不一定合用",
@@ -6145,6 +6642,58 @@
   ]
  },
  {
+  "id": 501,
+  "title": "tastytrade Market Measures（2017）：低 IV 时买期权按自家规矩管理照样亏——卖方的镜像证据",
+  "title_zh": "波动小的时候买期权，结果还是亏钱",
+  "source_url": "https://www.ivoox.com/en/market-measures-june-12-2017-is-audios-mp3_rf_19212530_1.html",
+  "source_name": "ivoox.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "期权再便宜买方也亏，夜航社守卖方打法更稳",
+  "summary_zh": "这是一档节目算的12年老账，像拿旧考卷重考一遍。它只在波动最小时买期权，波动就是期权贵不贵。两种买法平均都亏。一种只赢三成，另一种赢一半也亏。夜航社做的是卖期权。这正好是反面提醒，别轻易改当买方。",
+  "use_zh": "它细到给了死规矩。SPY买45天到期的，只等IV Rank低于10。IV Rank就是贵不贵排队，低于10是最便宜那档。宽跨式买离现价远的两边，赚50%就走。平值跨式买贴着现价的两边，赚25%就走。夜航社在Paper卖铁鹰、蝴蝶，都是卖两边盼价格别跑太远。它能当反面清单，想改买方先停一下。原文没说算没算手续费，这组数也别当死数。",
+  "action_step_zh": "看完记住低IV买方也难赚就够，不用改Paper卖方打法",
+  "keywords": [
+   "低IV买方",
+   "宽跨式",
+   "平值跨式",
+   "卖方占优",
+   "提前止盈"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 494,
+  "title": "Li & Miller 学术论文：卖宽跨按买卖价差成交仍为正，但 2020 年样本所有结构全负、加翼没救回来",
+  "title_zh": "卖宽跨平时赚，2020大跌加翼也亏",
+  "source_url": "http://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2025-Greece/papers/LiandMillerTheta2025.pdf",
+  "source_name": "efmaefm.org",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "卖宽跨十年能赚，大跌时加翼也亏，别只看平时赚多少",
+  "summary_zh": "这是一篇拿十年标普期权算账的论文，就是看卖保险到底赚不赚钱。卖宽跨就是同时卖涨跌两边的保险，赌价格别跑太远，按真实成交价算月度平均赚3.4%，改成每周做波动小很多。但2020年一闹大波动，跨式和铁蝶全亏，加了翅膀保护也没救回来。",
+  "use_zh": "先看它拆腿的结果：长期卖看跌期权赚钱，卖看涨期权亏钱。夜航社回测就是拿过去考卷先模拟考一遍，可以把铁鹰两条腿分开算。再把2020年大跌那几周单独测，加翼还亏就先别进Paper模拟盘。",
+  "action_step_zh": "看完知道平时赚钱不算数、大跌几周最要命就行，不用动手改参数。",
+  "keywords": [
+   "卖宽跨",
+   "每周更稳",
+   "铁蝶加翼",
+   "2020大跌",
+   "拆腿算账"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 488,
   "title": "Wheel 策略十年回测（45→21 DTE、Δ0.30 时间止损）— 成本未披露，降级看",
   "title_zh": "滚轮策略十年回测，赚头多半来自股票",
@@ -6221,6 +6770,32 @@
   ]
  },
  {
+  "id": 510,
+  "title": "个人实盘日志 Day 124：SPX 0DTE 铁鹰 30 笔 +$2,675，大亏全来自不止损和亏损后加方向单",
+  "title_zh": "铁鹰赚了，大亏全栽在不止损和赌气单上",
+  "source_url": "https://www.foolishtrader.com/day-124/",
+  "source_name": "foolishtrader.com",
+  "stream": "options",
+  "theme": "opt_losses",
+  "score": 45,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "铁鹰小赚靠守规矩，不止损加赌气单最烧钱",
+  "summary_zh": "这是一个人的实盘流水账，记当天到期的铁鹰。铁鹰就是赌价格别跑太远，两边留距离，像开车别贴路边。他铁鹰赚了2675美元。大亏都来自死扛不走，还有赌气追单。你在Paper模拟盘练的正是铁鹰，很对口。",
+  "use_zh": "他翅膀隔15点的铁鹰8笔全赢，换去做纳指20笔却亏了6649美元。他手续费花了3295美元，快赶上毛赚的一半，这笔账也别漏看。你夜航社在Paper模拟盘可对照记账，专查死扛单、赌气单和手续费。",
+  "action_step_zh": "看完记住不止损和赌气单最烧钱就够，这条不用动手改系统",
+  "keywords": [
+   "SPX铁鹰",
+   "当天到期",
+   "不止损",
+   "赌气加单",
+   "手续费高"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 443,
   "title": "OptionStrat vs SharkQuant: Tools and Pricing",
   "title_zh": "两个期权工具比一比，哪个更值",
@@ -6240,510 +6815,6 @@
    "伽马图",
    "资金流",
    "价格对比"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 414,
-  "title": "Buy-Write Indexes: BXM, BXMD, and PUT Explained",
-  "title_zh": "手里有股票又卖期权收钱，这打法咋算成绩",
-  "source_url": "https://www.dividendvision.com/learn/buy-write-index",
-  "source_name": "www.dividendvision.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "讲清备兑打法的三张成绩单，帮你别把基金比错对象",
-  "summary_zh": "这篇讲手里有股又卖期权收钱的打法。打个比方，像有房出租收租金。涨太多时，你也只能赚到约定那点。BXM这些指数，就是这类打法的成绩单。比基金时拿错成绩单，赚亏都会看错。",
-  "use_zh": "老实说，它跟你的0DTE铁鹰关系不大，BXM这类也不是定翅膀的工具。你现在在Paper里练铁鹰，用不上买股卖权。但以后刷到这类基金广告，能拿它查人家比错没比错。",
-  "action_step_zh": "看完知道比基金别拿错成绩单就够了，不用往模拟盘里搬。",
-  "keywords": [
-   "备兑打法",
-   "卖权收钱",
-   "三张成绩单",
-   "基金对比"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 412,
-  "title": "Cboe Validus S&P 500® Dynamic Call BuyWrite℠ Index",
-  "title_zh": "卖认购位置会变的标普指数来了",
-  "source_url": "https://cdn.cboe.com/resources/indices/factsheet/CboeGlobalIndices_CALD-Index.pdf",
-  "source_name": "cdn.cboe.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "CALD卖认购会随行情挪位置，帮你看灵活定价赚不赚",
-  "summary_zh": "CALD记的也是拿股卖认购的打法。但它卖的约定卖价不固定。它会看行情脸色，再挪卖价位置。像摆摊卖货，人多就涨价，人少就降价。这样收钱多少，会跟着行情变。",
-  "use_zh": "你现在定翅膀要看关键位，本来就是灵活定法。CALD正好给了一个灵活挪位置的对照样。Paper里可以分两组跑，固定距离一组，看位挪一组比结果。",
-  "action_step_zh": "看完知道卖出位置能随行情挪就够了，你已按关键位定，不用再改。",
-  "keywords": [
-   "CALD指数",
-   "卖价会变",
-   "随行情挪",
-   "备兑打法"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 341,
-  "title": "Expected Profit Odds of Buying 0DTE SPX Options",
-  "title_zh": "买当天到期的标普期权，赚钱机会有多大",
-  "source_url": "https://tradeintel.ca/research/spx-0dte-entry-time.html",
-  "source_name": "tradeintel.ca",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "一张表看清买当天标普期权要花多少、赚钱机会多大",
-  "summary_zh": "这是一张买当天标普期权的账单表。0DTE就是今天买、今天到期的期权。表里列了几点买、花多少钱、赚钱机会多大。那天标普收盘跌了0.4%。",
-  "use_zh": "你Paper里做的是收钱等到期的组合，不是单买。这张表正好当参照。它提醒你，几点进场和选哪个价位差别很大。",
-  "action_step_zh": "看完知道几点进场、选哪个价差别很大就够，单日表不用搬。",
-  "keywords": [
-   "当天期权",
-   "买标普",
-   "赚钱机会",
-   "入场时间"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 307,
-  "title": "0DTE Options Backtesting: Do Zero Days to Expiration Strategies Actually Work?",
-  "title_zh": "多数当天期权打法长期其实亏钱",
-  "source_url": "https://optionspilot.app/blog/0dte-options-backtesting-zero-days-expiration-strategies",
-  "source_name": "optionspilot.app",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "多数0DTE打法看着热闹，拉长看其实在亏钱。",
-  "summary_zh": "这篇专讲0DTE，就是今天买今天到期的期权。作者拿回测查了很多打法，回测就是拿过去的考卷先模拟考一遍。结论很扎心，多数打法拉长看都亏钱，网上晒的暴富图不能全信。",
-  "use_zh": "这一条的结论正对夜航社的回测关：多数0DTE打法在大样本下亏钱。你现在只在Paper模拟盘验证，就先把铁鹰和蝴蝶拉长样本回测。回测过不了关，就别急着进Paper，更别谈以后实盘。",
-  "action_step_zh": "看完知道多数当天打法长期都亏钱，Paper前先拉长回测就够了",
-  "keywords": [
-   "0DTE",
-   "回测",
-   "多数亏钱",
-   "别信晒图"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 306,
-  "title": "Results From Trading Zero DTE SPX Iron Butterflies For Year 2024 - Options Cafe",
-  "title_zh": "他做一年标普蝴蝶胜率有七成七",
-  "source_url": "https://options.cafe/results/2024/zero-dte-spx-iron-butterflies/",
-  "source_name": "options.cafe",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "2024年做标普蝴蝶168笔，胜率77%还赚了钱。",
-  "summary_zh": "这是一个人晒的2024年成绩单，像亮自己的交易账本。他只做标普500的0DTE铁蝴蝶，铁蝴蝶就是中间卖两边买、赌价格别跑太远。全年168笔赢了129笔，胜率77%，一共赚5079美元。",
-  "use_zh": "这一组168笔、胜率77%的数据，能当蝴蝶打法的对照账本。你做SPX 0DTE铁蝴蝶Paper时，可以比一比自己的胜率和平均每笔赚多少。先在Paper验够这组差距，再谈以后上实盘，别只看它84%的回报就心动。",
-  "action_step_zh": "看完记住168笔胜率77%这组数就行，不用照着动手做",
-  "keywords": [
-   "铁蝴蝶",
-   "胜率七七",
-   "168笔",
-   "成绩单"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 271,
-  "title": "The Factor Structure of 0DTE Option Returns",
-  "title_zh": "当天到期的期权，为啥会涨会跌",
-  "source_url": "https://www.fmaconferences.org/Derivatives2024/52.pdf",
-  "source_name": "www.fmaconferences.org",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "当天期权涨跌有共同原因，不是全靠运气乱跳。",
-  "summary_zh": "0DTE就是当天到期的期权，今天买今天见分晓，SPX就是美国500家大公司的整体脸色。这篇论文把它的涨跌拆开看，发现不是全靠乱跳，背后有几股共同力量在推。说白了，同一天里很多期权会一起动，不是各跳各的。",
-  "use_zh": "你在Paper模拟盘试SPX当天铁鹰，铁鹰就是两边设围栏、赚中间钱的打法。回测时别只记赚赔，回测就是拿旧考卷先模拟考一遍，还要记那几股共同力量当时强不强。这样验出来的打法，以后谈实盘才更靠谱。",
-  "action_step_zh": "看完知道当天期权常一起涨跌就够，不用动手改东西。",
-  "keywords": [
-   "当天到期",
-   "SPX期权",
-   "涨跌原因",
-   "共同力量"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 270,
-  "title": "0DTE mechanics — Knowledge base — Thesis Trading AI",
-  "title_zh": "当天期权最怕突然跳空，先算最坏情况",
-  "source_url": "https://www.thesistrading.ai/kb/opt-0dte-mechanics/",
-  "source_name": "www.thesistrading.ai",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "卖当天期权前先算最坏跳空，仓位别下得太满。",
-  "summary_zh": "0DTE就是当天到期的期权，今天买今天见分晓。这条讲卖这种期权时，风险没封顶的单子最危险，跳空就是价格一下跳很远、中间没成交。所以下单前要先按最坏的跳法算仓位，别按平常波动随便下大单。",
-  "use_zh": "你的Paper盘在试铁鹰，铁鹰就是两边设围栏、赚中间钱的打法，它的亏有翅膀挡着。这条说的没封顶卖单更凶，但跳空时铁鹰也会一下亏到围栏边。验策略时加一段大跳空行情，先看最坏亏多少，再定仓位。",
-  "action_step_zh": "看完知道先按价格一下跳很远来算最坏亏损就够。",
-  "keywords": [
-   "当天到期",
-   "卖期权",
-   "跳空风险",
-   "仓位大小"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 236,
-  "title": "0DTEs: Trading, Gamma Risk and Volatility Propagation",
-  "title_zh": "当天期权买的人太多，会不会推乱大盘",
-  "source_url": "https://www.researchgate.net/publication/377984312_0DTEs_Trading_Gamma_Risk_and_Volatility_Propagation",
-  "source_name": "www.researchgate.net",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "查当天期权热炒会不会让SPX大盘晃得更凶",
-  "summary_zh": "这篇讲SPX当天到期期权。0DTE就是今天买、今天到期。买的人一下多了很多。作者查它会不会推乱大盘。做市商就是陪大家成交的人。他急补货时，价格容易被推走。你做的铁鹰，就是两边留保护距离的卖法，最怕这种乱晃。",
-  "use_zh": "你定铁鹰翅膀时要看GEX。GEX就是做市商手里压了多少货。这篇能帮你看懂补货为啥推价格。先在Paper模拟盘里对着关键位验，别急着上实盘。",
-  "action_step_zh": "买单一下挤太多会把价格推乱，这点记住就够，不用动手。",
-  "keywords": [
-   "当天期权",
-   "SPX大盘",
-   "做市商补货",
-   "价格乱晃"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 235,
-  "title": "0DTE Trading Rules∗",
-  "title_zh": "当天期权到底哪种打法真赚过钱",
-  "source_url": "https://beehiiv-publication-files.s3.amazonaws.com/uploads/downloadables/09cc8a00-8d50-4e69-a182-87d6c6de649e/613e190f-41f2-4ada-b6ad-73f3454b4cc3/0DTE%20Trading%20Rules.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQCMHTQSE2JGAGXHJ%2F20260720%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260720T085941Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f5a55978fbf1cb643b47d24fcc659220f60284079d412f9073a54fe413cd6d8a",
-  "source_name": "beehiiv-publication-files.s3.amazonaws.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "翻过去数据查当天期权哪种打法真赚到过钱",
-  "summary_zh": "这篇就是拿旧考卷做模拟考。这就叫回测。作者翻SPX当天期权的旧数据。看哪种买卖法过去真拿到钱。数据还会一直更新。后面还会分情况看打法。",
-  "use_zh": "你的规矩是策略先过回测再进Paper。这篇的打法清单和更新数据正好能当考卷。先挑一两条跟铁鹰对得上的，跑完再进模拟盘。",
-  "action_step_zh": "哪种打法过去真落袋过，心里有数就够，先不用搬进模拟盘。",
-  "keywords": [
-   "当天期权",
-   "打法清单",
-   "拿旧数据试",
-   "真实赚亏"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 200,
-  "title": "Tom Sosnoff’s rules for 0DTE and short-term options",
-  "title_zh": "做了四十多年期权的老手讲规矩",
-  "source_url": "https://ovisual.com/tom-sosnoff-0dte-short-term-options-rules/",
-  "source_name": "ovisual.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "老手讲当天和短期期权的规矩，新手可以先听",
-  "summary_zh": "这是一个一小时的视频合集，主讲人Tom Sosnoff从1981年就在期权市场干活。他还一起创办过thinkorswim和tastytrade两个交易平台。视频把他讲当天期权和短期期权的规矩拼在一起。当天期权就是今天就到期的期权，来得快、去得也快。",
-  "use_zh": "铁鹰就是两边卖期权收钱，再买远一点的期权兜底。你做SPX当天铁鹰时，可以把他的规矩记成一张小清单。先在Paper模拟盘一条条试，试够了再为以后上实盘做准备。",
-  "action_step_zh": "看完把老手讲的当天期权规矩记下就够，先不用改打法",
-  "keywords": [
-   "期权老手",
-   "当天期权",
-   "短期交易",
-   "经验规矩"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 173,
-  "title": "Iron Condor: Payoff, Max Loss & How to Trade It",
-  "title_zh": "铁鹰怎么赚钱最多亏多少",
-  "source_url": "https://www.optionsdecay.com/strategies/advanced/iron-condor/",
-  "source_name": "www.optionsdecay.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "讲清铁鹰的赚法和最大亏损，新手先看懂再下单",
-  "summary_zh": "这是一篇铁鹰入门课，铁鹰就像在价格两边拉两条线，价格待在中间就赚钱。价格跑出去会亏，但最多亏多少，开仓前就能算好。文中数字只是教学例子，不是真实战绩，别当真报价。",
-  "use_zh": "你Paper里正跑SPX当天铁鹰，这篇正好补最基础的赚亏账。先拿它算清翅膀外最多亏多少，再定你的止损线。文中例子别当报价，真实数字只看你Paper里的成交。",
-  "action_step_zh": "看完知道铁鹰开仓前就能算清最多亏多少，就够了，不用照搬例子数字。",
-  "keywords": [
-   "铁鹰入门",
-   "最大亏损",
-   "中间赚钱",
-   "教学例子"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 151,
-  "title": "如何靠股票期权赚钱:现实数学 | CurvedTrading",
-  "title_zh": "靠期权赚钱先算清这笔账",
-  "source_url": "https://curvedtrading.com/articles/zh/trading/ruhe-kao-gupiao-qiquan-zhuanqian/",
-  "source_name": "curvedtrading.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "一份期权管一百股，先算最大亏损再动手。",
-  "summary_zh": "这是一篇泼冷水的期权赚钱课，专讲背后的真账。期权说白了，是花小钱买一个将来买卖股票的权利。一份就管100股，涨跌都会被放大。它提醒你别只看能赚多少，先算清最多会亏多少。",
-  "use_zh": "你定铁鹰翅膀时，要记住一份合约管100股。翅膀就是最外边两道防线，亏到那里就封顶。先按这个真账算最大亏损，再进Paper验，别光看胜率。",
-  "action_step_zh": "看完记住一份管100股，算账先看最多亏多少就够了。",
-  "keywords": [
-   "期权真账",
-   "一份百股",
-   "杠杆风险",
-   "最大亏损"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 145,
-  "title": "洪守傑選擇權高手班DVD（修訂版） epub pdf  txt mobi 電子書 下載  在線閱讀 2026 -灣灣書站",
-  "title_zh": "老手讲选择权：别逆势，别满仓",
-  "source_url": "https://twbook.tinynews.org/books/0010696675",
-  "source_name": "twbook.tinynews.org",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "老手课讲期权纪律：别逆势，别满仓，一定要止损。",
-  "summary_zh": "这是洪守杰选择权课的下载页。选择权就是台湾那边对期权的叫法。老师的规矩很直白：别逆着大势，别把钱全压上，一定要止损。书里还讲突破买、转强买、逢低买三种买点。",
-  "use_zh": "你在Paper里练上下设防线的铁鹰，最怕行情往一边冲。这课的别逆势、别满仓、要止损，能做成下单前检查表。它讲台股打法，SPX点位不能照搬。",
-  "action_step_zh": "看完记住别逆大势、别把钱全压上、疼了就认赔走就够，不用改模拟单。",
-  "keywords": [
-   "老手课",
-   "别逆势",
-   "别满仓",
-   "要止损",
-   "三种买点"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 144,
-  "title": "Options Part 1: How Options Work & The Greeks | OVTLYR University Lesson 14 - BiliBili",
-  "title_zh": "视频第一课：期权咋玩，风险咋看",
-  "source_url": "https://www.bilibili.tv/ms/video/4801522717432320?bstar_from=bstar-web.ugc-video-detail.related-recommend.all",
-  "source_name": "www.bilibili.tv",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "视频第一课讲期权咋运作，还有仪表盘式的风险数字。",
-  "summary_zh": "这是一节B站上的期权入门视频。它先讲期权合约咋运作，再讲希腊字母。希腊字母说白了就是仪表盘数字。能看价格一动，手里的单会疼多少。",
-  "use_zh": "你练上下设防线的铁鹰，管风险要看这些仪表盘数字。看懂这课，Paper里盯盘就不容易抓瞎。它只有第一课，复杂打法还得另找。",
-  "action_step_zh": "看完能看懂仪表盘数字就够。就是价格一动，手里的单会疼多少。",
-  "keywords": [
-   "期权视频",
-   "第一课",
-   "希腊字母",
-   "仪表盘",
-   "看风险"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 135,
-  "title": "0DTE Iron Condor, Oct 12–16: Twice the Credit by Thursday",
-  "title_zh": "一周铁鹰复盘，周四收的钱翻倍了",
-  "source_url": "https://www.optionsdecay.com/case-studies/iron-condor-week-2026-10-12/",
-  "source_name": "www.optionsdecay.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "铁鹰到了周四收钱翻倍，但这只是回测",
-  "summary_zh": "这是一份一周回测记录。回测就是拿过去的考卷先模拟考一遍。0DTE就是今天买、今天到期的期权。铁鹰就是两边卖期权先收钱。价格别跑出两边画好的线就行。这周到了周四，收的钱约翻倍。但这不是真钱成交记录。手续费也没算清。",
-  "use_zh": "你正在Paper模拟盘练SPX 0DTE铁鹰。这一条的周四翻倍值得你对照一下。看看你那周周四是不是也收钱更多。先在回测里对一遍。再进Paper看几天。别拿这一周就改定翅膀的位置。",
-  "action_step_zh": "那周周四多收钱先记在心里，只有一周，别改翅膀位置。",
-  "keywords": [
-   "0DTE铁鹰",
-   "一周回测",
-   "周四翻倍",
-   "不是实盘"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 133,
-  "title": "0DTE Iron Condor: The 50% Stop That Cost 55%",
-  "title_zh": "止损设在亏一半，最后却多亏了",
-  "source_url": "https://www.optionsdecay.com/case-studies/iron-condor-stop-loss-overshoot/",
-  "source_name": "www.optionsdecay.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "铁鹰止损设亏一半，实际却亏了55%",
-  "summary_zh": "这篇复盘一个止损翻车的事。主角还是0DTE铁鹰。止损就是亏到一条线就赶紧跑。回测就是拿过去的考卷先模拟考一遍。这次原想亏一半就跑。真跑时却亏了约55%。说白了，线画好了也未必跑得掉。这也不是真钱成交记录。",
-  "use_zh": "你做SPX 0DTE铁鹰，正要定止损规矩。这一条提醒你别只写亏50%就跑。Paper里要多记一件事。信号到了到真卖掉，中间又多亏多少。这个差值以后上实盘前必须算清。",
-  "action_step_zh": "记住止损会滑：想亏一半就停，实际可能亏到约55%。",
-  "keywords": [
-   "铁鹰止损",
-   "亏一半",
-   "实际多亏",
-   "跑不掉"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 118,
-  "title": "After 9,000 trades, the 0DTE Breakeven Iron Condor is still my most profitable strategy",
-  "title_zh": "他做了9000笔当天铁鹰，还是最赚钱",
-  "source_url": "https://www.thetaprofits.com/my-most-profitable-options-trading-strategy-0dte-breakeven-iron-condor/",
-  "source_name": "www.thetaprofits.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "9000笔实测说保本铁鹰最赚钱，值得你在Paper里跟着验一验",
-  "summary_zh": "这是一个老交易员的复盘。保本铁鹰就是让亏钱起点更远。像球门再往外挪一点。他做了快5年。一共9000多笔。这个打法赚得最多。也一直比较稳。你可以先看看他的做法。",
-  "use_zh": "这条最值钱的是9000多笔这个量，不是赢几笔就来吹。你把保本铁鹰单独建一组，和普通铁鹰分开记成绩。先拿旧行情模拟考一遍，再进Paper慢慢比哪组更稳。",
-  "action_step_zh": "看完记住保本铁鹰更稳就够。它跑了9000多笔，但没给价位，先别改打法。",
-  "keywords": [
-   "9000笔",
-   "保本铁鹰",
-   "五年记录",
-   "SPX",
-   "最赚钱"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 117,
-  "title": "Iron Condor Strategy: Structure, Example & Max Loss [2026]",
-  "title_zh": "铁鹰到底怎么搭，四条腿讲清了",
-  "source_url": "https://optionsapp.de/en/glossar/iron-condor",
-  "source_name": "optionsapp.de",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "讲清铁鹰四条腿怎么搭和最多亏多少，新手搭仓前先看懂结构",
-  "summary_zh": "这篇是铁鹰的入门说明。铁鹰像在价格两边围个院子。价格在院子里就能收钱。它用四条腿搭起来。两边各卖一张。再各买一张挡风险。文中还举例算最多亏多少。你不赌涨跌时能参考它。",
-  "use_zh": "你定翅膀位置时，先照这篇的四条腿图核对一遍。翅膀就是最外边买的那两张，专门封住大亏。少一条腿亏钱上限就不对，核对完再放进Paper试。",
-  "action_step_zh": "看完知道铁鹰四条腿怎么搭、最多亏多少就够，不用动手，你在Paper里早这么做了",
-  "keywords": [
-   "铁鹰结构",
-   "四条腿",
-   "中立打法",
-   "最大亏损",
-   "举例说明"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 93,
-  "title": "0DTE Options Trading: The Complete Guide to Same-Day Expiration Strategies",
-  "title_zh": "当天期权上午稳，下午可能亏到底",
-  "source_url": "https://www.optionsdecay.com/0dte-options-trading/",
-  "source_name": "www.optionsdecay.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "0DTE上午收钱看着稳，下午冲出去可能亏光，要先练离场",
-  "summary_zh": "这份大全讲0DTE玩法。0DTE就是当天到期的期权，像鲜奶一样当天作废。早上卖SPX组合先收一点钱。SPX就是标普500指数。下午价格冲出安全区，就可能亏到最多。",
-  "use_zh": "这条正对你的SPX铁鹰和蝴蝶Paper。早上收钱后别以为就稳了。下午要提前定好冲出去怎么走。先在Paper里练够，再谈后面的实盘。",
-  "action_step_zh": "看完知道下午会把早上收的钱亏光就够，先不用改打法。",
-  "keywords": [
-   "当天到期",
-   "早上收钱",
-   "下午风险",
-   "亏到最多"
-  ],
-  "project_keys": [
-   "nightwatch"
-  ]
- },
- {
-  "id": 92,
-  "title": "0DTE Options and Volatility: The Complete Day Trading Guide",
-  "title_zh": "SPX期权一半成交，都是当天到期",
-  "source_url": "https://volatilitybox.com/research/0dte-options-and-volatility/",
-  "source_name": "volatilitybox.com",
-  "stream": "options",
-  "theme": "opt_strategy",
-  "score": 47,
-  "usability_tier": "reference",
-  "scope_verdict": "core",
-  "one_liner_zh": "SPX一半成交是当天期权，晃得凶时定翅膀更要小心",
-  "summary_zh": "这篇讲0DTE和波动率的关系。波动率就是价格晃得凶不凶。打个比方，像坐船晃的程度。现在SPX期权成交里，约一半是0DTE。它当天到期，一天就走完生死。",
-  "use_zh": "你定铁鹰翅膀时要先看它。晃得凶的日子，翅膀别放太近。开仓时间也别乱选。先在Paper里分晃和不晃的日子各测一轮。",
-  "action_step_zh": "看完知道当天期权占一半、晃得凶翅膀要远就够，不用动手。",
-  "keywords": [
-   "波动大小",
-   "一半成交",
-   "当天到期",
-   "定翅膀"
   ],
   "project_keys": [
    "nightwatch"
@@ -6844,6 +6915,56 @@
    "亏到五万",
    "期权不是股票",
    "仓位别重"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 414,
+  "title": "Buy-Write Indexes: BXM, BXMD, and PUT Explained",
+  "title_zh": "手里有股票又卖期权收钱，这打法咋算成绩",
+  "source_url": "https://www.dividendvision.com/learn/buy-write-index",
+  "source_name": "www.dividendvision.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "讲清备兑打法的三张成绩单，帮你别把基金比错对象",
+  "summary_zh": "这篇讲手里有股又卖期权收钱的打法。打个比方，像有房出租收租金。涨太多时，你也只能赚到约定那点。BXM这些指数，就是这类打法的成绩单。比基金时拿错成绩单，赚亏都会看错。",
+  "use_zh": "老实说，它跟你的0DTE铁鹰关系不大，BXM这类也不是定翅膀的工具。你现在在Paper里练铁鹰，用不上买股卖权。但以后刷到这类基金广告，能拿它查人家比错没比错。",
+  "action_step_zh": "看完知道比基金别拿错成绩单就够了，不用往模拟盘里搬。",
+  "keywords": [
+   "备兑打法",
+   "卖权收钱",
+   "三张成绩单",
+   "基金对比"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 412,
+  "title": "Cboe Validus S&P 500® Dynamic Call BuyWrite℠ Index",
+  "title_zh": "卖认购位置会变的标普指数来了",
+  "source_url": "https://cdn.cboe.com/resources/indices/factsheet/CboeGlobalIndices_CALD-Index.pdf",
+  "source_name": "cdn.cboe.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "CALD卖认购会随行情挪位置，帮你看灵活定价赚不赚",
+  "summary_zh": "CALD记的也是拿股卖认购的打法。但它卖的约定卖价不固定。它会看行情脸色，再挪卖价位置。像摆摊卖货，人多就涨价，人少就降价。这样收钱多少，会跟着行情变。",
+  "use_zh": "你现在定翅膀要看关键位，本来就是灵活定法。CALD正好给了一个灵活挪位置的对照样。Paper里可以分两组跑，固定距离一组，看位挪一组比结果。",
+  "action_step_zh": "看完知道卖出位置能随行情挪就够了，你已按关键位定，不用再改。",
+  "keywords": [
+   "CALD指数",
+   "卖价会变",
+   "随行情挪",
+   "备兑打法"
   ],
   "project_keys": [
    "nightwatch"
@@ -7045,6 +7166,31 @@
   "project_keys": []
  },
  {
+  "id": 341,
+  "title": "Expected Profit Odds of Buying 0DTE SPX Options",
+  "title_zh": "买当天到期的标普期权，赚钱机会有多大",
+  "source_url": "https://tradeintel.ca/research/spx-0dte-entry-time.html",
+  "source_name": "tradeintel.ca",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "一张表看清买当天标普期权要花多少、赚钱机会多大",
+  "summary_zh": "这是一张买当天标普期权的账单表。0DTE就是今天买、今天到期的期权。表里列了几点买、花多少钱、赚钱机会多大。那天标普收盘跌了0.4%。",
+  "use_zh": "你Paper里做的是收钱等到期的组合，不是单买。这张表正好当参照。它提醒你，几点进场和选哪个价位差别很大。",
+  "action_step_zh": "看完知道几点进场、选哪个价差别很大就够，单日表不用搬。",
+  "keywords": [
+   "当天期权",
+   "买标普",
+   "赚钱机会",
+   "入场时间"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 327,
   "title": "An open-source software for calculating 1D gamma index in radiation therapy",
   "title_zh": "这个伽马是治癌检查，不是炒期权的",
@@ -7066,6 +7212,56 @@
    "关系不大"
   ],
   "project_keys": []
+ },
+ {
+  "id": 307,
+  "title": "0DTE Options Backtesting: Do Zero Days to Expiration Strategies Actually Work?",
+  "title_zh": "多数当天期权打法长期其实亏钱",
+  "source_url": "https://optionspilot.app/blog/0dte-options-backtesting-zero-days-expiration-strategies",
+  "source_name": "optionspilot.app",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "多数0DTE打法看着热闹，拉长看其实在亏钱。",
+  "summary_zh": "这篇专讲0DTE，就是今天买今天到期的期权。作者拿回测查了很多打法，回测就是拿过去的考卷先模拟考一遍。结论很扎心，多数打法拉长看都亏钱，网上晒的暴富图不能全信。",
+  "use_zh": "这一条的结论正对夜航社的回测关：多数0DTE打法在大样本下亏钱。你现在只在Paper模拟盘验证，就先把铁鹰和蝴蝶拉长样本回测。回测过不了关，就别急着进Paper，更别谈以后实盘。",
+  "action_step_zh": "看完知道多数当天打法长期都亏钱，Paper前先拉长回测就够了",
+  "keywords": [
+   "0DTE",
+   "回测",
+   "多数亏钱",
+   "别信晒图"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 306,
+  "title": "Results From Trading Zero DTE SPX Iron Butterflies For Year 2024 - Options Cafe",
+  "title_zh": "他做一年标普蝴蝶胜率有七成七",
+  "source_url": "https://options.cafe/results/2024/zero-dte-spx-iron-butterflies/",
+  "source_name": "options.cafe",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "2024年做标普蝴蝶168笔，胜率77%还赚了钱。",
+  "summary_zh": "这是一个人晒的2024年成绩单，像亮自己的交易账本。他只做标普500的0DTE铁蝴蝶，铁蝴蝶就是中间卖两边买、赌价格别跑太远。全年168笔赢了129笔，胜率77%，一共赚5079美元。",
+  "use_zh": "这一组168笔、胜率77%的数据，能当蝴蝶打法的对照账本。你做SPX 0DTE铁蝴蝶Paper时，可以比一比自己的胜率和平均每笔赚多少。先在Paper验够这组差距，再谈以后上实盘，别只看它84%的回报就心动。",
+  "action_step_zh": "看完记住168笔胜率77%这组数就行，不用照着动手做",
+  "keywords": [
+   "铁蝴蝶",
+   "胜率七七",
+   "168笔",
+   "成绩单"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
  },
  {
   "id": 301,
@@ -7158,6 +7354,56 @@
    "四类东西"
   ],
   "project_keys": []
+ },
+ {
+  "id": 271,
+  "title": "The Factor Structure of 0DTE Option Returns",
+  "title_zh": "当天到期的期权，为啥会涨会跌",
+  "source_url": "https://www.fmaconferences.org/Derivatives2024/52.pdf",
+  "source_name": "www.fmaconferences.org",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "当天期权涨跌有共同原因，不是全靠运气乱跳。",
+  "summary_zh": "0DTE就是当天到期的期权，今天买今天见分晓，SPX就是美国500家大公司的整体脸色。这篇论文把它的涨跌拆开看，发现不是全靠乱跳，背后有几股共同力量在推。说白了，同一天里很多期权会一起动，不是各跳各的。",
+  "use_zh": "你在Paper模拟盘试SPX当天铁鹰，铁鹰就是两边设围栏、赚中间钱的打法。回测时别只记赚赔，回测就是拿旧考卷先模拟考一遍，还要记那几股共同力量当时强不强。这样验出来的打法，以后谈实盘才更靠谱。",
+  "action_step_zh": "看完知道当天期权常一起涨跌就够，不用动手改东西。",
+  "keywords": [
+   "当天到期",
+   "SPX期权",
+   "涨跌原因",
+   "共同力量"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 270,
+  "title": "0DTE mechanics — Knowledge base — Thesis Trading AI",
+  "title_zh": "当天期权最怕突然跳空，先算最坏情况",
+  "source_url": "https://www.thesistrading.ai/kb/opt-0dte-mechanics/",
+  "source_name": "www.thesistrading.ai",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "卖当天期权前先算最坏跳空，仓位别下得太满。",
+  "summary_zh": "0DTE就是当天到期的期权，今天买今天见分晓。这条讲卖这种期权时，风险没封顶的单子最危险，跳空就是价格一下跳很远、中间没成交。所以下单前要先按最坏的跳法算仓位，别按平常波动随便下大单。",
+  "use_zh": "你的Paper盘在试铁鹰，铁鹰就是两边设围栏、赚中间钱的打法，它的亏有翅膀挡着。这条说的没封顶卖单更凶，但跳空时铁鹰也会一下亏到围栏边。验策略时加一段大跳空行情，先看最坏亏多少，再定仓位。",
+  "action_step_zh": "看完知道先按价格一下跳很远来算最坏亏损就够。",
+  "keywords": [
+   "当天到期",
+   "卖期权",
+   "跳空风险",
+   "仓位大小"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
  },
  {
   "id": 261,
@@ -7283,6 +7529,56 @@
   ]
  },
  {
+  "id": 236,
+  "title": "0DTEs: Trading, Gamma Risk and Volatility Propagation",
+  "title_zh": "当天期权买的人太多，会不会推乱大盘",
+  "source_url": "https://www.researchgate.net/publication/377984312_0DTEs_Trading_Gamma_Risk_and_Volatility_Propagation",
+  "source_name": "www.researchgate.net",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "查当天期权热炒会不会让SPX大盘晃得更凶",
+  "summary_zh": "这篇讲SPX当天到期期权。0DTE就是今天买、今天到期。买的人一下多了很多。作者查它会不会推乱大盘。做市商就是陪大家成交的人。他急补货时，价格容易被推走。你做的铁鹰，就是两边留保护距离的卖法，最怕这种乱晃。",
+  "use_zh": "你定铁鹰翅膀时要看GEX。GEX就是做市商手里压了多少货。这篇能帮你看懂补货为啥推价格。先在Paper模拟盘里对着关键位验，别急着上实盘。",
+  "action_step_zh": "买单一下挤太多会把价格推乱，这点记住就够，不用动手。",
+  "keywords": [
+   "当天期权",
+   "SPX大盘",
+   "做市商补货",
+   "价格乱晃"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 235,
+  "title": "0DTE Trading Rules∗",
+  "title_zh": "当天期权到底哪种打法真赚过钱",
+  "source_url": "https://beehiiv-publication-files.s3.amazonaws.com/uploads/downloadables/09cc8a00-8d50-4e69-a182-87d6c6de649e/613e190f-41f2-4ada-b6ad-73f3454b4cc3/0DTE%20Trading%20Rules.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQCMHTQSE2JGAGXHJ%2F20260720%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260720T085941Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f5a55978fbf1cb643b47d24fcc659220f60284079d412f9073a54fe413cd6d8a",
+  "source_name": "beehiiv-publication-files.s3.amazonaws.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "翻过去数据查当天期权哪种打法真赚到过钱",
+  "summary_zh": "这篇就是拿旧考卷做模拟考。这就叫回测。作者翻SPX当天期权的旧数据。看哪种买卖法过去真拿到钱。数据还会一直更新。后面还会分情况看打法。",
+  "use_zh": "你的规矩是策略先过回测再进Paper。这篇的打法清单和更新数据正好能当考卷。先挑一两条跟铁鹰对得上的，跑完再进模拟盘。",
+  "action_step_zh": "哪种打法过去真落袋过，心里有数就够，先不用搬进模拟盘。",
+  "keywords": [
+   "当天期权",
+   "打法清单",
+   "拿旧数据试",
+   "真实赚亏"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 232,
   "title": "0DTEs: Trading, Gamma Risk and Volatility Propagation",
   "title_zh": "当天期权热了，大盘的晃动会传开吗",
@@ -7383,6 +7679,31 @@
   ]
  },
  {
+  "id": 200,
+  "title": "Tom Sosnoff’s rules for 0DTE and short-term options",
+  "title_zh": "做了四十多年期权的老手讲规矩",
+  "source_url": "https://ovisual.com/tom-sosnoff-0dte-short-term-options-rules/",
+  "source_name": "ovisual.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "老手讲当天和短期期权的规矩，新手可以先听",
+  "summary_zh": "这是一个一小时的视频合集，主讲人Tom Sosnoff从1981年就在期权市场干活。他还一起创办过thinkorswim和tastytrade两个交易平台。视频把他讲当天期权和短期期权的规矩拼在一起。当天期权就是今天就到期的期权，来得快、去得也快。",
+  "use_zh": "铁鹰就是两边卖期权收钱，再买远一点的期权兜底。你做SPX当天铁鹰时，可以把他的规矩记成一张小清单。先在Paper模拟盘一条条试，试够了再为以后上实盘做准备。",
+  "action_step_zh": "看完把老手讲的当天期权规矩记下就够，先不用改打法",
+  "keywords": [
+   "期权老手",
+   "当天期权",
+   "短期交易",
+   "经验规矩"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 184,
   "title": "Short-Term Options Can Drain Your Account Faster Than You Think—Here's the Math",
   "title_zh": "短期期权亏钱，比想的快得多",
@@ -7402,6 +7723,56 @@
    "两百美元",
    "时间耗损",
    "小亏累积"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 173,
+  "title": "Iron Condor: Payoff, Max Loss & How to Trade It",
+  "title_zh": "铁鹰怎么赚钱最多亏多少",
+  "source_url": "https://www.optionsdecay.com/strategies/advanced/iron-condor/",
+  "source_name": "www.optionsdecay.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "讲清铁鹰的赚法和最大亏损，新手先看懂再下单",
+  "summary_zh": "这是一篇铁鹰入门课，铁鹰就像在价格两边拉两条线，价格待在中间就赚钱。价格跑出去会亏，但最多亏多少，开仓前就能算好。文中数字只是教学例子，不是真实战绩，别当真报价。",
+  "use_zh": "你Paper里正跑SPX当天铁鹰，这篇正好补最基础的赚亏账。先拿它算清翅膀外最多亏多少，再定你的止损线。文中例子别当报价，真实数字只看你Paper里的成交。",
+  "action_step_zh": "看完知道铁鹰开仓前就能算清最多亏多少，就够了，不用照搬例子数字。",
+  "keywords": [
+   "铁鹰入门",
+   "最大亏损",
+   "中间赚钱",
+   "教学例子"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 151,
+  "title": "如何靠股票期权赚钱:现实数学 | CurvedTrading",
+  "title_zh": "靠期权赚钱先算清这笔账",
+  "source_url": "https://curvedtrading.com/articles/zh/trading/ruhe-kao-gupiao-qiquan-zhuanqian/",
+  "source_name": "curvedtrading.com",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "一份期权管一百股，先算最大亏损再动手。",
+  "summary_zh": "这是一篇泼冷水的期权赚钱课，专讲背后的真账。期权说白了，是花小钱买一个将来买卖股票的权利。一份就管100股，涨跌都会被放大。它提醒你别只看能赚多少，先算清最多会亏多少。",
+  "use_zh": "你定铁鹰翅膀时，要记住一份合约管100股。翅膀就是最外边两道防线，亏到那里就封顶。先按这个真账算最大亏损，再进Paper验，别光看胜率。",
+  "action_step_zh": "看完记住一份管100股，算账先看最多亏多少就够了。",
+  "keywords": [
+   "期权真账",
+   "一份百股",
+   "杠杆风险",
+   "最大亏损"
   ],
   "project_keys": [
    "nightwatch"
@@ -7458,6 +7829,58 @@
   "project_keys": []
  },
  {
+  "id": 145,
+  "title": "洪守傑選擇權高手班DVD（修訂版） epub pdf  txt mobi 電子書 下載  在線閱讀 2026 -灣灣書站",
+  "title_zh": "老手讲选择权：别逆势，别满仓",
+  "source_url": "https://twbook.tinynews.org/books/0010696675",
+  "source_name": "twbook.tinynews.org",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "老手课讲期权纪律：别逆势，别满仓，一定要止损。",
+  "summary_zh": "这是洪守杰选择权课的下载页。选择权就是台湾那边对期权的叫法。老师的规矩很直白：别逆着大势，别把钱全压上，一定要止损。书里还讲突破买、转强买、逢低买三种买点。",
+  "use_zh": "你在Paper里练上下设防线的铁鹰，最怕行情往一边冲。这课的别逆势、别满仓、要止损，能做成下单前检查表。它讲台股打法，SPX点位不能照搬。",
+  "action_step_zh": "看完记住别逆大势、别把钱全压上、疼了就认赔走就够，不用改模拟单。",
+  "keywords": [
+   "老手课",
+   "别逆势",
+   "别满仓",
+   "要止损",
+   "三种买点"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
+  "id": 144,
+  "title": "Options Part 1: How Options Work & The Greeks | OVTLYR University Lesson 14 - BiliBili",
+  "title_zh": "视频第一课：期权咋玩，风险咋看",
+  "source_url": "https://www.bilibili.tv/ms/video/4801522717432320?bstar_from=bstar-web.ugc-video-detail.related-recommend.all",
+  "source_name": "www.bilibili.tv",
+  "stream": "options",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
+  "scope_verdict": "core",
+  "one_liner_zh": "视频第一课讲期权咋运作，还有仪表盘式的风险数字。",
+  "summary_zh": "这是一节B站上的期权入门视频。它先讲期权合约咋运作，再讲希腊字母。希腊字母说白了就是仪表盘数字。能看价格一动，手里的单会疼多少。",
+  "use_zh": "你练上下设防线的铁鹰，管风险要看这些仪表盘数字。看懂这课，Paper里盯盘就不容易抓瞎。它只有第一课，复杂打法还得另找。",
+  "action_step_zh": "看完能看懂仪表盘数字就够。就是价格一动，手里的单会疼多少。",
+  "keywords": [
+   "期权视频",
+   "第一课",
+   "希腊字母",
+   "仪表盘",
+   "看风险"
+  ],
+  "project_keys": [
+   "nightwatch"
+  ]
+ },
+ {
   "id": 141,
   "title": "PSX call wall 270, put wall 260: Nov 13",
   "title_zh": "PSX这只票，上方270下方260有墙",
@@ -7507,28 +7930,28 @@
   ]
  },
  {
-  "id": 128,
-  "title": "optrabot · TestPyPI",
-  "title_zh": "同个期权机器人在测试站上架了",
-  "source_url": "https://test.pypi.org/project/optrabot/0.33.2rc11/",
-  "source_name": "test.pypi.org",
+  "id": 135,
+  "title": "0DTE Iron Condor, Oct 12–16: Twice the Credit by Thursday",
+  "title_zh": "一周铁鹰复盘，周四收的钱翻倍了",
+  "source_url": "https://www.optionsdecay.com/case-studies/iron-condor-week-2026-10-12/",
+  "source_name": "www.optionsdecay.com",
   "stream": "options",
-  "theme": "opt_bots",
-  "score": 35,
-  "usability_tier": "low",
+  "theme": "opt_strategy",
+  "score": 47,
+  "usability_tier": "reference",
   "scope_verdict": "core",
-  "one_liner_zh": "期权机器人先上测试站，想试的人能先装来看看。",
-  "summary_zh": "这还是 OptraBot 那个期权机器人。这次讲它在 TestPyPI 上的页面。TestPyPI 像试吃区，先试装，再决定用不用。",
-  "use_zh": "这条和上一条是同一个 OptraBot，差别只在它挂在测试站上。你在 Paper 里试前，可先单独装一遍，别把测试版当正式版用。",
-  "action_step_zh": "跟上一条是同一个机器人，还是测试版，别重复装，划过。",
+  "one_liner_zh": "铁鹰到了周四收钱翻倍，但这只是回测",
+  "summary_zh": "这是一份一周回测记录。回测就是拿过去的考卷先模拟考一遍。0DTE就是今天买、今天到期的期权。铁鹰就是两边卖期权先收钱。价格别跑出两边画好的线就行。这周到了周四，收的钱约翻倍。但这不是真钱成交记录。手续费也没算清。",
+  "use_zh": "你正在Paper模拟盘练SPX 0DTE铁鹰。这一条的周四翻倍值得你对照一下。看看你那周周四是不是也收钱更多。先在回测里对一遍。再进Paper看几天。别拿这一周就改定翅膀的位置。",
+  "action_step_zh": "那周周四多收钱先记在心里，只有一周，别改翅膀位置。",
   "keywords": [
-   "测试上架",
-   "先试再用",
-   "期权机器人",
-   "自动交易"
+   "0DTE铁鹰",
+   "一周回测",
+   "周四翻倍",
+   "不是实盘"
   ],
   "project_keys": [
-   "ibkr"
+   "nightwatch"
   ]
  },
  {

@@ -1,6 +1,6 @@
 # 破茧情报站 · 其余条目名单（去重 / 避坑用）
 
-下面是已判为「只是看看 / 用处不大」的条目。**这些条目 leex 已经判过，不要再当新发现推荐给 Lee；若在别处看到同一来源，知道已被判过即可。找新情报是 leex 的活，Grok 不用管这份名单的更新。**「只是看看」的有结论和经验可参考，但没有现成东西可搬；标（不对口）的是与期权交易和本项目无关、已被范围关沉底的。导出时间：2026-11-17。共 285 条（站内另有 26 条最早入库的低分条目未在此名单，均不在能用目录内）。
+下面是已判为「只是看看 / 用处不大」的条目。**这些条目 leex 已经判过，不要再当新发现推荐给 Lee；若在别处看到同一来源，知道已被判过即可。找新情报是 leex 的活，Grok 不用管这份名单的更新。**「只是看看」的有结论和经验可参考，但没有现成东西可搬；标（不对口）的是与期权交易和本项目无关、已被范围关沉底的。导出时间：2026-11-17（含第二轮深挖）。共 284 条（站内另有 32 条未在此名单：26 条最早入库的低分条目与 6 条已划掉的 OptraBot 重复条目，均不在能用目录内）。
 
 
 ## 只是看看（144 条）
@@ -74,6 +74,8 @@
 - 【53 分】Grok写代码，跟Claude比谁强 — https://swanbase.co/en/blog/grok-build-review-pricing-claude-code/
 - 【53 分】人很容易把Claude的想法当成自己的 — http://buttondown.com/nyfe/archive/the-daily-bot-oct-29-analysts-took-claude-codes/
 - 【53 分】Reddit网友怎么评价Claude — https://www.aitooldiscovery.com/guides/claude-reddit
+- 【51 分】B站小白期权课：铁鹰和当天到期全讲了 — https://www.bilibili.com/video/BV1eyy4BVEcX
+- 【51 分】官方33年账本：铁鹰跌得最浅 — https://cdn.cboe.com/resources/indices/documents/benchmarks-fact-sheet.pdf
 - 【51 分】买期权数据别只看价，便宜的不一定合用 — https://desktested.com/posts/options-data-api-comparison/
 - 【51 分】这家券商做铁鹰便宜很多 — https://yieldova.com/tastytrade-review/
 - 【51 分】印度那边咋回测期权打法 — https://algotest.in/blog/how-to-backtest-options-trading-strategies-with-examples/
@@ -112,6 +114,8 @@
 - 【49 分】编程帮手里网友最推Claude Code — https://www.aitooldiscovery.com/guides/best-ai-agents-reddit
 - 【48 分】散户炒期权，到底有多少人真赚钱 — https://papertradingjournal.com/2026/03/31/options-trading-statistics/
 - 【48 分】Claude管家能搬到自己家跑了 — https://www.bpinfo.ca/en/news/2026-11-12-anthropic-self-hosted-managed-agents-beta/
+- 【47 分】波动小的时候买期权，结果还是亏钱 — https://www.ivoox.com/en/market-measures-june-12-2017-is-audios-mp3_rf_19212530_1.html
+- 【47 分】卖宽跨平时赚，2020大跌加翼也亏 — http://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2025-Greece/papers/LiandMillerTheta2025.pdf
 - 【47 分】滚轮策略十年回测，赚头多半来自股票 — https://quantgt.io/research/thetagang-vs-the-index
 - 【47 分】手里有股票再卖认购，能多赚钱吗 — https://www.researchgate.net/publication/228914669_Passive_Options-Based_Investment_Strategies_The_Case_of_the_CBOE_SP_500_BuyWrite_Index
 - 【47 分】留着现金卖认沽，能多收钱吗 — https://www.researchgate.net/publication/247906423_The_Cash-secured_PutWrite_Strategy_and_Performance_of_Related_Benchmark_Indexes
@@ -131,11 +135,7 @@
 - 【47 分】老手讲选择权：别逆势，别满仓 — https://twbook.tinynews.org/books/0010696675
 - 【47 分】视频第一课：期权咋玩，风险咋看 — https://www.bilibili.tv/ms/video/4801522717432320?bstar_from=bstar-web.ugc-video-detail.related-recommend.all
 - 【47 分】一周铁鹰复盘，周四收的钱翻倍了 — https://www.optionsdecay.com/case-studies/iron-condor-week-2026-10-12/
-- 【47 分】止损设在亏一半，最后却多亏了 — https://www.optionsdecay.com/case-studies/iron-condor-stop-loss-overshoot/
-- 【47 分】他做了9000笔当天铁鹰，还是最赚钱 — https://www.thetaprofits.com/my-most-profitable-options-trading-strategy-0dte-breakeven-iron-condor/
-- 【47 分】铁鹰到底怎么搭，四条腿讲清了 — https://optionsapp.de/en/glossar/iron-condor
-- 【47 分】当天期权上午稳，下午可能亏到底 — https://www.optionsdecay.com/0dte-options-trading/
-- 【47 分】SPX期权一半成交，都是当天到期 — https://volatilitybox.com/research/0dte-options-and-volatility/
+- 【45 分】铁鹰赚了，大亏全栽在不止损和赌气单上 — https://www.foolishtrader.com/day-124/
 - 【45 分】散户买期权，为啥大多在亏钱 — https://www.lsu.edu/business/files/event-files/2025-finance-mardi-gras/retail_option_trading_v2.pdf
 - 【45 分】花两万美元买教训：期权别乱买 — https://www.morningstar.com/news/marketwatch/2026022487/i-paid-20000-to-learn-hard-lessons-about-trading-options
 - 【45 分】股价没动，期权为啥先亏30美元 — https://www.linkedin.com/posts/jrgreen1_optionstrading-financialliteracy-activity-7525715271911759872-0I7M
@@ -150,7 +150,7 @@
 - 【42 分】一千美元起步，咋亏到五万美元 — https://www.wbluep.com/blog/2026-06-11-how-traders-lose-50000-starting-with-1000-in-options
 - 【42 分】散户爱玩当天期权，其实大多在亏钱 — https://wp.lancs.ac.uk/fofi2024/files/2024/04/FoFI-2024-146-Leander-Gayda.pdf
 
-## 用处不大（141 条）
+## 用处不大（140 条）
 
 - 【35 分】tastytrade好用吗费用工具一次看清 — https://www.dollarscout.net/trading/reviews/tastytrade/
 - 【35 分】Tastytrade靠谱吗？过来人说实话 — https://beststockstrategy.com/tastytrade-review/
@@ -163,7 +163,6 @@
 - 【35 分】期权从零学到能上手的一篇长文 — https://www.futuhk.com/blog/detail-options-tutorial-from-beginner-to-practical-fundamentals-trading-strategies-hands-on-skills-30-240405004
 - 【35 分】《3小时快学期权》电子书下载页 — https://book.qciss.net/books/28079526279
 - 【35 分】PSX这只票，上方270下方260有墙 — https://squawkflow.com/ticker/PSX
-- 【35 分】同个期权机器人在测试站上架了 — https://test.pypi.org/project/optrabot/0.33.2rc11/
 - 【35 分】新手入门：两个编程AI到底是干啥的 — https://benmore-brief-84rp4p.benmore.ai/claude-code-explained
 - 【35 分】一门课同时教你用两个编程AI做应用 — https://www.udemy.com/course/claude-code-x-codex-from-beginner-to-advanced-workflows/
 - 【35 分】各家编程AI工具都在卖啥，这页帮你挑 — https://agentfactory.piaic.org/building-ai-workers/agentic-coding/both-ai-vendors/
